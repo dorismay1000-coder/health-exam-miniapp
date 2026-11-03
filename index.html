@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#123B5D">
   <title>Community Health Exam</title>
+
   <style>
     * { box-sizing: border-box; }
 
@@ -19,52 +20,77 @@
     header {
       background: #123B5D;
       color: white;
-      padding: 30px 20px;
+      padding: 28px 18px;
       text-align: center;
     }
 
-    header h1 { margin: 0 0 10px; }
-
+    header h1 { margin: 0 0 9px; }
     header p { margin: 0; opacity: .9; }
 
     main {
       max-width: 650px;
-      margin: 30px auto;
-      padding: 0 18px;
+      margin: 25px auto;
+      padding: 0 16px;
     }
 
-    .welcome {
+    .panel {
       background: white;
-      padding: 25px;
+      padding: 23px;
       border-radius: 14px;
-      text-align: center;
       box-shadow: 0 3px 12px #0000000d;
     }
 
-    .welcome h2 { color: #123B5D; }
+    h2 { color: #123B5D; }
 
     .subjects {
       display: grid;
       gap: 12px;
-      margin-top: 22px;
+      margin-top: 20px;
     }
 
-    .subject {
-      background: white;
-      padding: 17px;
-      border-radius: 10px;
-      border: 1px solid #dce5ed;
+    button {
+      cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-      text-align: left;
-      color: #123B5D;
+      border: none;
+      border-radius: 10px;
+      padding: 17px;
     }
 
-    .subject span {
+    .subject-button {
+      background: white;
+      color: #123B5D;
+      border: 1px solid #dce5ed;
+      text-align: left;
+      width: 100%;
+    }
+
+    .subject-button:hover {
+      background: #eaf2f8;
+    }
+
+    .subject-button span {
       float: right;
       color: #668096;
       font-weight: normal;
+      font-size: 14px;
     }
+
+    .primary-button {
+      background: #123B5D;
+      color: white;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    .secondary-button {
+      background: #e7edf3;
+      color: #123B5D;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .hidden { display: none; }
 
     footer {
       text-align: center;
@@ -74,40 +100,120 @@
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Community Health Exam</h1>
-    <p>Free Health Science Practice Quizzes</p>
-  </header>
+<header>
+  <h1>Community Health Exam</h1>
+  <p>Free Health Science Practice Quizzes</p>
+</header>
 
-  <main>
-    <section class="welcome">
-      <h2>Welcome!</h2>
-      <p>
-        Test your knowledge with practice questions
-        across nine health science subjects.
-      </p>
-      <p>Each subject contains 10 multiple-choice questions.</p>
-    </section>
+<main>
 
-    <section class="subjects">
-      <div class="subject">Anatomy <span>10 Questions</span></div>
-      <div class="subject">Physiology <span>10 Questions</span></div>
-      <div class="subject">Pharmacology <span>10 Questions</span></div>
-      <div class="subject">Community Health <span>10 Questions</span></div>
-      <div class="subject">Parasitology <span>10 Questions</span></div>
-      <div class="subject">Medicine <span>10 Questions</span></div>
-      <div class="subject">Paediatrics <span>10 Questions</span></div>
-      <div class="subject">General Nursing <span>10 Questions</span></div>
-      <div class="subject">Nutrition <span>10 Questions</span></div>
-    </section>
-  </main>
+  <section id="homeScreen" class="panel">
+    <h2>Welcome!</h2>
 
-  <footer>
-    Community Health Exam · Practice and improve
-  </footer>
+    <p>
+      Test your knowledge with practice questions
+      across nine health science subjects.
+    </p>
+
+    <p>Each subject contains 10 multiple-choice questions.</p>
+
+    <h2>Choose a Subject</h2>
+
+    <div id="subjectList" class="subjects"></div>
+  </section>
+
+  <section id="subjectScreen" class="panel hidden">
+    <h2 id="selectedSubject"></h2>
+
+    <p>
+      This practice quiz contains 10 multiple-choice
+      questions.
+    </p>
+
+    <p>
+      After submitting your answers, you will see
+      your score, correct answers and explanations.
+    </p>
+
+    <button class="primary-button" onclick="startQuiz()">
+      Start Quiz
+    </button>
+
+    <button class="secondary-button" onclick="showHome()">
+      Back to Subjects
+    </button>
+  </section>
+
+  <section id="quizScreen" class="panel hidden">
+    <h2 id="quizSubject"></h2>
+    <p>The quiz question bank will be connected in the next stage.</p>
+
+    <button class="secondary-button" onclick="showHome()">
+      Back to Subjects
+    </button>
+  </section>
+
+</main>
+
+<footer>
+  Community Health Exam · Practice and improve
+</footer>
+
+<script>
+  const subjects = [
+    "Anatomy",
+    "Physiology",
+    "Pharmacology",
+    "Community Health",
+    "Parasitology",
+    "Medicine",
+    "Paediatrics",
+    "General Nursing",
+    "Nutrition"
+  ];
+
+  let currentSubject = "";
+
+  const subjectList = document.getElementById("subjectList");
+
+  subjects.forEach(subject => {
+    const button = document.createElement("button");
+
+    button.className = "subject-button";
+    button.innerHTML = `${subject} <span>10 Questions</span>`;
+
+    button.addEventListener("click", () => {
+      selectSubject(subject);
+    });
+
+    subjectList.appendChild(button);
+  });
+
+  function selectSubject(subject) {
+    currentSubject = subject;
+
+    document.getElementById("selectedSubject").textContent = subject;
+    document.getElementById("homeScreen").classList.add("hidden");
+    document.getElementById("subjectScreen").classList.remove("hidden");
+  }
+
+  function showHome() {
+    document.getElementById("homeScreen").classList.remove("hidden");
+    document.getElementById("subjectScreen").classList.add("hidden");
+    document.getElementById("quizScreen").classList.add("hidden");
+  }
+
+  function startQuiz() {
+    document.getElementById("subjectScreen").classList.add("hidden");
+    document.getElementById("quizScreen").classList.remove("hidden");
+
+    document.getElementById("quizSubject").textContent =
+      currentSubject;
+  }
+</script>
 
 </body>
 </html>
-
