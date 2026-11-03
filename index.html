@@ -163,6 +163,13 @@
 </footer>
 
 <script>
+    const tg = window.Telegram?.WebApp;
+
+  if (tg) {
+    tg.ready();
+    tg.expand();
+  }
+  
   const subjects = [
     "Anatomy",
     "Physiology",
