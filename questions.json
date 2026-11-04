@@ -1,0 +1,1410 @@
+{
+  "totalQuestions": 90,
+  "totalSubjects": 9,
+  "subjects": [
+    {
+      "subject": "Nutrition",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Excessive vitamin A intake (particularly as preformed retinol) during pregnancy is associated with which risk?",
+          "options": {
+            "A": "Teratogenic effects and birth defects",
+            "B": "No known risk at any dose",
+            "C": "Improved fetal bone mineralisation with no other effects",
+            "D": "Reduced risk of neural tube defects"
+          },
+          "correctAnswer": "A",
+          "explanation": "Very high doses of preformed vitamin A during pregnancy are teratogenic and have been associated with congenital malformations, so intake should be carefully monitored."
+        },
+        {
+          "id": 2,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Older adults are at particular risk of which vitamin deficiency due to reduced gastric acid secretion affecting its release from food?",
+          "options": {
+            "A": "Vitamin K",
+            "B": "Vitamin A",
+            "C": "Vitamin C",
+            "D": "Vitamin B12"
+          },
+          "correctAnswer": "D",
+          "explanation": "Reduced gastric acid production in many older adults impairs the release of protein-bound vitamin B12 from food, increasing the risk of deficiency."
+        },
+        {
+          "id": 3,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which nutrient combination is particularly important in older adults to help maintain bone density and reduce fracture risk?",
+          "options": {
+            "A": "Iodine and selenium",
+            "B": "Iron and vitamin C",
+            "C": "Calcium and vitamin D",
+            "D": "Zinc and vitamin B6"
+          },
+          "correctAnswer": "C",
+          "explanation": "Adequate calcium and vitamin D intake supports bone mineral density in older adults, helping to reduce the risk of osteoporotic fractures."
+        },
+        {
+          "id": 4,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "The glycaemic index of a food is a measure of which of the following?",
+          "options": {
+            "A": "The vitamin and mineral density of a food",
+            "B": "The total protein content of a food",
+            "C": "The total calorie content of a food per 100 grams",
+            "D": "How quickly a carbohydrate-containing food raises blood glucose levels compared with a reference food"
+          },
+          "correctAnswer": "D",
+          "explanation": "The glycaemic index ranks carbohydrate-containing foods by how rapidly and highly they raise blood glucose levels relative to a standard reference, such as glucose or white bread."
+        },
+        {
+          "id": 5,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "The DASH (Dietary Approaches to Stop Hypertension) diet emphasises which combination of dietary features?",
+          "options": {
+            "A": "High intake of red meat and full-fat dairy",
+            "B": "High intake of refined sugar and processed foods",
+            "C": "High intake of fruits, vegetables, and low-fat dairy, with reduced sodium",
+            "D": "Complete elimination of all dietary fat"
+          },
+          "correctAnswer": "C",
+          "explanation": "The DASH diet emphasises fruits, vegetables, whole grains, and low-fat dairy while limiting sodium, saturated fat, and added sugars, and has been shown to lower blood pressure."
+        },
+        {
+          "id": 6,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which micronutrient is commonly added to wheat flour in many countries specifically to reduce the risk of neural tube defects at a population level?",
+          "options": {
+            "A": "Zinc",
+            "B": "Vitamin A",
+            "C": "Folic acid",
+            "D": "Vitamin C"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mandatory folic acid fortification of wheat flour has been implemented in many countries as a public health strategy to reduce the population-level incidence of neural tube defects."
+        },
+        {
+          "id": 7,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Mid-upper arm circumference (MUAC) is a widely used field measurement for rapidly screening which condition in young children?",
+          "options": {
+            "A": "Iron-deficiency anaemia",
+            "B": "Vitamin D deficiency",
+            "C": "Acute malnutrition",
+            "D": "Iodine deficiency"
+          },
+          "correctAnswer": "C",
+          "explanation": "MUAC is a simple, low-cost field measurement used to rapidly screen for acute malnutrition in children, particularly in resource-limited or emergency settings."
+        },
+        {
+          "id": 8,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "A very low weight-for-height measurement in a child is used to identify which type of malnutrition?",
+          "options": {
+            "A": "Overnutrition (obesity)",
+            "B": "Acute malnutrition (wasting)",
+            "C": "Chronic malnutrition (stunting)",
+            "D": "Micronutrient deficiency only, with no calorie deficit"
+          },
+          "correctAnswer": "B",
+          "explanation": "Low weight-for-height reflects recent, acute weight loss or failure to gain weight appropriately, identifying wasting."
+        },
+        {
+          "id": 9,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Dietary antioxidants such as vitamins C and E primarily function in the body by which mechanism?",
+          "options": {
+            "A": "Increasing red blood cell production",
+            "B": "Providing a direct source of dietary energy",
+            "C": "Neutralising harmful free radicals and reducing oxidative cellular damage",
+            "D": "Directly killing bacteria and viruses"
+          },
+          "correctAnswer": "C",
+          "explanation": "Antioxidants neutralise reactive free radicals, helping to reduce oxidative stress and associated cellular damage."
+        },
+        {
+          "id": 10,
+          "subject": "Nutrition",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which term describes a nutrient that the body cannot synthesise in adequate amounts and must therefore obtain from the diet?",
+          "options": {
+            "A": "Conditional nutrient only in illness",
+            "B": "Non-essential nutrient",
+            "C": "Essential nutrient",
+            "D": "Macronutrient exclusively"
+          },
+          "correctAnswer": "C",
+          "explanation": "An essential nutrient is one the body cannot produce in sufficient quantity itself and must be obtained through diet."
+        }
+      ]
+    },
+    {
+      "subject": "Medicine",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which symptom is most characteristic of iron-deficiency anaemia?",
+          "options": {
+            "A": "Polyuria",
+            "B": "Persistent haematuria",
+            "C": "Fatigue and exertional breathlessness",
+            "D": "Severe jaundice"
+          },
+          "correctAnswer": "C",
+          "explanation": "Reduced haemoglobin concentration decreases oxygen delivery and commonly causes fatigue and exertional breathlessness."
+        },
+        {
+          "id": 2,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which laboratory finding is most consistent with vitamin B12 deficiency?",
+          "options": {
+            "A": "Reduced mean corpuscular volume",
+            "B": "Increased platelet count",
+            "C": "Reduced bilirubin in every patient",
+            "D": "Increased mean corpuscular volume"
+          },
+          "correctAnswer": "D",
+          "explanation": "Vitamin B12 deficiency causes megaloblastic anaemia with macrocytosis and an increased mean corpuscular volume."
+        },
+        {
+          "id": 3,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which condition is a common cause of haemolytic anaemia?",
+          "options": {
+            "A": "Essential hypertension",
+            "B": "Osteoarthritis",
+            "C": "Glucose-6-phosphate dehydrogenase deficiency",
+            "D": "Hypothyroidism"
+          },
+          "correctAnswer": "C",
+          "explanation": "G6PD deficiency can cause episodic haemolysis, particularly following exposure to oxidative stress such as certain drugs or infections."
+        },
+        {
+          "id": 4,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which laboratory finding supports a diagnosis of haemolysis?",
+          "options": {
+            "A": "Increased haptoglobin",
+            "B": "Reduced unconjugated bilirubin",
+            "C": "Low reticulocyte count",
+            "D": "Raised lactate dehydrogenase"
+          },
+          "correctAnswer": "D",
+          "explanation": "Haemolysis commonly causes increased LDH and unconjugated bilirubin with reduced haptoglobin and an increased reticulocyte count."
+        },
+        {
+          "id": 5,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which clinical feature is typical of sickle cell disease?",
+          "options": {
+            "A": "Severe hypertension in childhood",
+            "B": "Recurrent vaso-occlusive pain episodes",
+            "C": "Persistent painless jaundice as the only feature",
+            "D": "Increased platelet production as the defining feature"
+          },
+          "correctAnswer": "B",
+          "explanation": "Sickling of red cells can obstruct small blood vessels and produce recurrent painful vaso-occlusive episodes."
+        },
+        {
+          "id": 6,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which complication is particularly associated with sickle cell disease?",
+          "options": {
+            "A": "Functional asplenia",
+            "B": "Mitral stenosis",
+            "C": "Appendicitis in every patient",
+            "D": "Hyperthyroidism"
+          },
+          "correctAnswer": "A",
+          "explanation": "Repeated splenic infarction can result in functional asplenia, increasing susceptibility to encapsulated bacterial infections."
+        },
+        {
+          "id": 7,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which clinical feature is characteristic of acute leukaemia?",
+          "options": {
+            "A": "Hypercalcaemia in every patient",
+            "B": "Persistent hypertension",
+            "C": "Anaemia, infections and bleeding",
+            "D": "Chronic isolated joint pain"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bone-marrow replacement by leukaemic cells can impair normal red-cell, white-cell and platelet production, causing anaemia, infections and bleeding."
+        },
+        {
+          "id": 8,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which blood-count abnormality is particularly characteristic of aplastic anaemia?",
+          "options": {
+            "A": "Isolated thrombocytosis",
+            "B": "Polycythaemia",
+            "C": "Pancytopenia",
+            "D": "Isolated neutrophilia"
+          },
+          "correctAnswer": "C",
+          "explanation": "Aplastic anaemia involves bone-marrow failure and commonly causes pancytopenia affecting red cells, white cells and platelets."
+        },
+        {
+          "id": 9,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which clinical feature is typical of multiple myeloma?",
+          "options": {
+            "A": "Persistent wheezing only",
+            "B": "Bone pain and recurrent infections",
+            "C": "Severe diarrhoea as the defining feature",
+            "D": "Isolated bradycardia"
+          },
+          "correctAnswer": "B",
+          "explanation": "Multiple myeloma can cause lytic bone lesions and pain, recurrent infections, anaemia, renal impairment and hypercalcaemia."
+        },
+        {
+          "id": 10,
+          "subject": "Medicine",
+          "department": "Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which laboratory finding may occur in multiple myeloma?",
+          "options": {
+            "A": "Low total protein",
+            "B": "Reduced immunoglobulin production in every patient",
+            "C": "Raised serum protein",
+            "D": "Severe hypocalcaemia in every patient"
+          },
+          "correctAnswer": "C",
+          "explanation": "Monoclonal immunoglobulin production can increase total serum protein and produce an abnormal paraprotein."
+        }
+      ]
+    },
+    {
+      "subject": "Anatomy",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which artery supplies most of the face and scalp?",
+          "options": {
+            "A": "Facial artery",
+            "B": "Superficial temporal artery",
+            "C": "Common carotid artery",
+            "D": "External carotid artery"
+          },
+          "correctAnswer": "D",
+          "explanation": "The external carotid artery is a terminal branch of the common carotid artery and supplies many structures of the face and scalp. It ascends through the neck and gives branches including the facial and superficial temporal arteries. The common carotid artery pulse is more commonly palpated at the side of the neck, so the wording here identifies the external carotid by its branch relationship rather than by the usual pulse site."
+        },
+        {
+          "id": 2,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which muscle is responsible for abduction of the arm from approximately 15 to 90 degrees?",
+          "options": {
+            "A": "Supraspinatus",
+            "B": "Deltoid",
+            "C": "Pectoralis major",
+            "D": "Latissimus dorsi"
+          },
+          "correctAnswer": "B",
+          "explanation": "The deltoid muscle is the principal abductor of the arm from approximately 15 to 90 degrees. The supraspinatus initiates abduction during the first approximately 15 degrees, while further elevation above 90 degrees requires upward rotation of the scapula by muscles including the trapezius and serratus anterior."
+        },
+        {
+          "id": 3,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which nerve is commonly referred to as the 'funny bone' nerve?",
+          "options": {
+            "A": "Median nerve",
+            "B": "Radial nerve",
+            "C": "Ulnar nerve",
+            "D": "Axillary nerve"
+          },
+          "correctAnswer": "C",
+          "explanation": "The ulnar nerve passes superficially behind the medial epicondyle of the humerus, where it can be compressed or struck against the bone. This commonly produces a tingling sensation radiating into the forearm and the little finger and medial half of the ring finger."
+        },
+        {
+          "id": 4,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which chamber of the heart receives deoxygenated blood from the superior and inferior venae cavae?",
+          "options": {
+            "A": "Right atrium",
+            "B": "Right ventricle",
+            "C": "Left atrium",
+            "D": "Left ventricle"
+          },
+          "correctAnswer": "A",
+          "explanation": "The right atrium receives deoxygenated blood returning from most of the body through the superior and inferior venae cavae. The blood then passes through the tricuspid valve into the right ventricle, which pumps it through the pulmonary trunk toward the lungs."
+        },
+        {
+          "id": 5,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which bone forms the lateral prominence of the shoulder?",
+          "options": {
+            "A": "Clavicle",
+            "B": "Scapula",
+            "C": "Humerus",
+            "D": "Radius"
+          },
+          "correctAnswer": "B",
+          "explanation": "The scapula forms the bony framework of the posterior shoulder. Its acromion, a lateral extension of the scapular spine, forms the palpable bony tip and roof of the shoulder and articulates with the clavicle at the acromioclavicular joint."
+        },
+        {
+          "id": 6,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which muscle is the main extensor of the hip?",
+          "options": {
+            "A": "Gluteus maximus",
+            "B": "Gluteus medius",
+            "C": "Iliacus",
+            "D": "Sartorius"
+          },
+          "correctAnswer": "A",
+          "explanation": "The gluteus maximus is the main powerful extensor of the hip joint. It is especially active when rising from a seated position, climbing stairs, and running. It arises from the posterior ilium, sacrum, and coccyx and inserts mainly into the iliotibial tract and gluteal tuberosity of the femur."
+        },
+        {
+          "id": 7,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "At approximately which vertebral level does the abdominal aorta bifurcate into the right and left common iliac arteries?",
+          "options": {
+            "A": "L4",
+            "B": "L1",
+            "C": "L2",
+            "D": "L3"
+          },
+          "correctAnswer": "A",
+          "explanation": "The abdominal aorta typically bifurcates into the right and left common iliac arteries at approximately the level of the fourth lumbar vertebra (L4). This is a standard anatomical landmark, although the exact level can vary slightly."
+        },
+        {
+          "id": 8,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which organ produces bile?",
+          "options": {
+            "A": "Pancreas",
+            "B": "Gallbladder",
+            "C": "Liver",
+            "D": "Spleen"
+          },
+          "correctAnswer": "C",
+          "explanation": "The liver produces bile, which contains bile salts that help emulsify dietary fats and facilitate their digestion and absorption. The gallbladder stores and concentrates bile before releasing it into the duodenum through the biliary ducts."
+        },
+        {
+          "id": 9,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which structure connects bone to bone at a joint?",
+          "options": {
+            "A": "Tendon",
+            "B": "Ligament",
+            "C": "Fascia",
+            "D": "Muscle"
+          },
+          "correctAnswer": "B",
+          "explanation": "A ligament is a band of dense connective tissue that connects bones to other bones. Ligaments help stabilize joints and guide or restrict movement. In contrast, tendons connect muscles to bones and transmit forces generated by muscle contraction."
+        },
+        {
+          "id": 10,
+          "subject": "Anatomy",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which nerve supplies the posterior compartment of the arm?",
+          "options": {
+            "A": "Radial nerve",
+            "B": "Median nerve",
+            "C": "Ulnar nerve",
+            "D": "Musculocutaneous nerve"
+          },
+          "correctAnswer": "A",
+          "explanation": "The radial nerve supplies the muscles of the posterior compartment of the arm, particularly the triceps brachii, which extends the elbow. It originates from the posterior cord of the brachial plexus and travels through the radial groove of the humerus alongside the profunda brachii artery."
+        }
+      ]
+    },
+    {
+      "subject": "Pharmacology",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient prescribed combined oral contraceptives asks what happens if a dose is missed. Why is following the product-specific missed-pill advice important?",
+          "options": {
+            "A": "Missed doses prevent all ovulation for the next year",
+            "B": "Missed doses can reduce contraceptive effectiveness",
+            "C": "Missing one dose always causes infertility",
+            "D": "Missed doses permanently increase fertility"
+          },
+          "correctAnswer": "B",
+          "explanation": "Missed hormonal contraceptive doses can reduce contraceptive protection, so product-specific instructions are important."
+        },
+        {
+          "id": 2,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A woman receiving oxytocin during labour develops excessively frequent uterine contractions. What is the main concern?",
+          "options": {
+            "A": "Reduced uterine activity",
+            "B": "Severe hypocalcaemia in every case",
+            "C": "Uterine hyperstimulation with possible fetal compromise",
+            "D": "Permanent maternal blindness"
+          },
+          "correctAnswer": "C",
+          "explanation": "Excessive oxytocin can cause uterine hyperstimulation, which may compromise uteroplacental blood flow and fetal wellbeing."
+        },
+        {
+          "id": 3,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient with postpartum haemorrhage receives oxytocin. What is the intended pharmacological effect?",
+          "options": {
+            "A": "Relax the uterus completely",
+            "B": "Increase uterine contraction to help reduce bleeding",
+            "C": "Increase gastric acid secretion",
+            "D": "Block platelet aggregation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Oxytocin stimulates uterine contraction and is used to help control postpartum haemorrhage."
+        },
+        {
+          "id": 4,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient with pre-eclampsia is receiving magnesium sulfate and becomes markedly drowsy with reduced reflexes. Which action is most appropriate?",
+          "options": {
+            "A": "Ignore the finding because it is always expected",
+            "B": "Give more magnesium sulfate",
+            "C": "Assess for magnesium toxicity and follow the emergency treatment protocol",
+            "D": "Give a thiazide diuretic only"
+          },
+          "correctAnswer": "C",
+          "explanation": "Reduced reflexes and marked CNS depression can indicate magnesium toxicity and require prompt assessment and management."
+        },
+        {
+          "id": 5,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient with anaphylaxis develops hypotension, wheezing and facial swelling. Which medicine should be given promptly as first-line treatment?",
+          "options": {
+            "A": "Intramuscular adrenaline",
+            "B": "Hydrocortisone alone",
+            "C": "Chlorphenamine alone",
+            "D": "Oral salbutamol"
+          },
+          "correctAnswer": "A",
+          "explanation": "Intramuscular adrenaline is the first-line medicine for anaphylaxis because it rapidly treats airway, breathing and circulatory compromise."
+        },
+        {
+          "id": 6,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient receiving adrenaline for anaphylaxis improves but remains under observation. Why is continued monitoring necessary?",
+          "options": {
+            "A": "Adrenaline prevents all future allergic reactions",
+            "B": "Adrenaline permanently cures the allergy",
+            "C": "The patient will inevitably develop renal failure",
+            "D": "Biphasic reactions and recurrence of symptoms can occur"
+          },
+          "correctAnswer": "D",
+          "explanation": "Symptoms can recur after initial improvement, so continued observation is necessary following significant anaphylaxis."
+        },
+        {
+          "id": 7,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient receiving heparin develops a significant fall in platelet count several days after treatment begins. What complication should be considered?",
+          "options": {
+            "A": "Heparin-induced thrombocytopenia",
+            "B": "Vitamin C deficiency",
+            "C": "Aplastic anaemia caused by folate",
+            "D": "Iron-deficiency anaemia"
+          },
+          "correctAnswer": "A",
+          "explanation": "A significant platelet fall during heparin therapy should raise concern for heparin-induced thrombocytopenia, a potentially serious prothrombotic reaction."
+        },
+        {
+          "id": 8,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient taking warfarin is prescribed a new medicine that increases bleeding risk. What is the most appropriate general approach?",
+          "options": {
+            "A": "Double the warfarin dose automatically",
+            "B": "Stop all medicines permanently",
+            "C": "Ignore the interaction if the patient feels well",
+            "D": "Review the interaction and monitor anticoagulation and bleeding risk"
+          },
+          "correctAnswer": "D",
+          "explanation": "Warfarin has important drug interactions, so the new medicine and anticoagulation status should be reviewed carefully."
+        },
+        {
+          "id": 9,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient receiving a medicine that strongly induces hepatic drug-metabolising enzymes may require a higher dose of another medicine. Why?",
+          "options": {
+            "A": "Enzyme induction always prevents absorption",
+            "B": "The induced enzymes destroy all drugs in the stomach",
+            "C": "Enzyme induction permanently blocks renal filtration",
+            "D": "Enzyme induction can increase metabolism and reduce plasma concentrations of some drugs"
+          },
+          "correctAnswer": "D",
+          "explanation": "Enzyme induction can increase metabolism of susceptible medicines and reduce their plasma concentrations and effects."
+        },
+        {
+          "id": 10,
+          "subject": "Pharmacology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient taking a medicine with a narrow therapeutic index develops toxicity after another medicine inhibits its metabolism. What is the most likely explanation?",
+          "options": {
+            "A": "The interacting medicine has increased metabolism",
+            "B": "Reduced metabolism has increased exposure to the narrow-therapeutic-index drug",
+            "C": "The interacting medicine has increased clearance",
+            "D": "The interacting medicine has reduced absorption only"
+          },
+          "correctAnswer": "B",
+          "explanation": "Enzyme inhibition can reduce metabolism, increasing drug exposure and the risk of toxicity, especially with narrow-therapeutic-index medicines."
+        }
+      ]
+    },
+    {
+      "subject": "Paediatrics",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which organism is a common bacterial cause of meningitis in young children?",
+          "options": {
+            "A": "Plasmodium falciparum",
+            "B": "Rotavirus",
+            "C": "Respiratory syncytial virus",
+            "D": "Streptococcus pneumoniae"
+          },
+          "correctAnswer": "D",
+          "explanation": "Streptococcus pneumoniae is an important bacterial cause of meningitis in children."
+        },
+        {
+          "id": 2,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child has fever, headache and altered consciousness in an area where malaria is endemic. Which severe complication should be considered?",
+          "options": {
+            "A": "Viral gastroenteritis",
+            "B": "Cerebral malaria",
+            "C": "Bronchiolitis",
+            "D": "Nephrotic syndrome"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cerebral malaria can present with impaired consciousness and seizures and is a severe complication of Plasmodium falciparum infection."
+        },
+        {
+          "id": 3,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child develops fever followed by a widespread rash and Koplik spots are seen in the mouth. Which infection is most likely?",
+          "options": {
+            "A": "Scarlet fever",
+            "B": "Chickenpox",
+            "C": "Measles",
+            "D": "Rubella"
+          },
+          "correctAnswer": "C",
+          "explanation": "Koplik spots and a characteristic febrile rash are strongly associated with measles."
+        },
+        {
+          "id": 4,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child develops sudden pallor and bruising, and blood tests show pancytopenia. Which diagnosis should be considered?",
+          "options": {
+            "A": "Acute leukaemia",
+            "B": "Simple viral upper respiratory infection",
+            "C": "Iron-deficiency anaemia",
+            "D": "Asthma"
+          },
+          "correctAnswer": "A",
+          "explanation": "Bone-marrow infiltration or failure in acute leukaemia can cause anaemia, thrombocytopenia and neutropenia."
+        },
+        {
+          "id": 5,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which feature is more suggestive of acute leukaemia than isolated iron-deficiency anaemia?",
+          "options": {
+            "A": "Reduced mean corpuscular volume only",
+            "B": "Mild pallor alone",
+            "C": "Low dietary iron intake",
+            "D": "Bone pain and hepatosplenomegaly"
+          },
+          "correctAnswer": "D",
+          "explanation": "Bone pain, hepatosplenomegaly and cytopenias suggest acute leukaemia rather than uncomplicated iron deficiency."
+        },
+        {
+          "id": 6,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child has delayed passage of meconium and chronic constipation from early infancy. Which diagnosis should be considered?",
+          "options": {
+            "A": "Coeliac disease",
+            "B": "Hirschsprung disease",
+            "C": "Intussusception",
+            "D": "Pyloric stenosis"
+          },
+          "correctAnswer": "B",
+          "explanation": "Hirschsprung disease results from absence of enteric ganglion cells and commonly presents with delayed meconium passage and constipation."
+        },
+        {
+          "id": 7,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child with sickle cell disease develops sudden chest pain, fever and worsening breathlessness. Which complication should be suspected?",
+          "options": {
+            "A": "Acute chest syndrome",
+            "B": "Croup",
+            "C": "Acute gastroenteritis",
+            "D": "Nephrotic syndrome"
+          },
+          "correctAnswer": "A",
+          "explanation": "Acute chest syndrome is a serious complication of sickle cell disease involving respiratory symptoms and a new pulmonary infiltrate."
+        },
+        {
+          "id": 8,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which clinical feature is most characteristic of type 1 diabetes mellitus in children?",
+          "options": {
+            "A": "Polyuria and weight loss",
+            "B": "Persistent jaundice",
+            "C": "Chronic productive cough",
+            "D": "Generalised lymphadenopathy"
+          },
+          "correctAnswer": "A",
+          "explanation": "Hyperglycaemia commonly causes polyuria, polydipsia and weight loss in children with type 1 diabetes."
+        },
+        {
+          "id": 9,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child with newly diagnosed type 1 diabetes develops vomiting, abdominal pain and deep rapid breathing. Which diagnosis is most likely?",
+          "options": {
+            "A": "Hyperosmolar hyperglycaemic state",
+            "B": "Hypoglycaemia",
+            "C": "Gastro-oesophageal reflux",
+            "D": "Diabetic ketoacidosis"
+          },
+          "correctAnswer": "D",
+          "explanation": "Diabetic ketoacidosis can cause vomiting, abdominal pain and Kussmaul-type deep breathing due to metabolic acidosis."
+        },
+        {
+          "id": 10,
+          "subject": "Paediatrics",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A child with fever, tachycardia and poor peripheral perfusion has delayed capillary refill. Which clinical condition should be considered?",
+          "options": {
+            "A": "Stable asthma",
+            "B": "Simple viral infection only",
+            "C": "Septic shock",
+            "D": "Chronic anaemia"
+          },
+          "correctAnswer": "C",
+          "explanation": "Poor perfusion with fever and cardiovascular instability may indicate septic shock."
+        }
+      ]
+    },
+    {
+      "subject": "Community Health",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which gas is a major indoor air pollutant associated with unvented biomass cooking stoves in developing nations?",
+          "options": {
+            "A": "Ozone gas",
+            "B": "Carbon monoxide and fine particulate matter (PM2.5)",
+            "C": "Helium gas",
+            "D": "Neon gas"
+          },
+          "correctAnswer": "B",
+          "explanation": "Incomplete combustion of solid fuels like wood or dung releases toxic carbon monoxide and particulate matter that cause severe respiratory illness."
+        },
+        {
+          "id": 2,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What is the primary function of the World Health Organization (WHO) International Health Regulations (IHR)?",
+          "options": {
+            "A": "To regulate domestic real estate transactions",
+            "B": "To manage individual consumer credit scores",
+            "C": "To set global corporate tax rates",
+            "D": "To prevent, protect against, control, and provide a public health response to the international spread of disease"
+          },
+          "correctAnswer": "D",
+          "explanation": "The IHR is an international legal framework designed to assist countries in preventing and responding to acute public health risks that have the potential to cross borders."
+        },
+        {
+          "id": 3,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which public health metric is calculated by dividing the number of maternal deaths due to pregnancy or childbirth complications by the total number of live births, multiplied by 100,000?",
+          "options": {
+            "A": "Case fatality rate",
+            "B": "Infant mortality rate",
+            "C": "Maternal mortality ratio",
+            "D": "Crude birth rate"
+          },
+          "correctAnswer": "C",
+          "explanation": "The maternal mortality ratio tracks the risk of maternal death relative to the number of live births."
+        },
+        {
+          "id": 4,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which intervention is most effective for preventing mother-to-child transmission (MTCT) of HIV during pregnancy and delivery?",
+          "options": {
+            "A": "Complete cessation of breastfeeding without nutritional replacement",
+            "B": "High-dose Vitamin C supplementation",
+            "C": "Antiretroviral therapy (ART) for the mother and infant prophylaxis",
+            "D": "Mandatory physical quarantine of the household"
+          },
+          "correctAnswer": "C",
+          "explanation": "Antiretroviral therapy suppresses maternal viral load and dramatically reduces transmission risk to the infant during pregnancy, labor, and breastfeeding."
+        },
+        {
+          "id": 5,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which type of bias arises when study participants alter their natural behavior because they know they are being observed?",
+          "options": {
+            "A": "Recall bias",
+            "B": "Attrition bias",
+            "C": "Hawthorne effect",
+            "D": "Berkson's bias"
+          },
+          "correctAnswer": "C",
+          "explanation": "The Hawthorne effect describes changes in individual behavior prompted by the awareness of being studied."
+        },
+        {
+          "id": 6,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which environmental sanitation measure is most effective for preventing the spread of trachoma, a leading infectious cause of blindness?",
+          "options": {
+            "A": "Chlorinating municipal swimming pools",
+            "B": "Distributing commercial sunscreen lotions",
+            "C": "Promoting facial cleanliness and regular face washing",
+            "D": "Constructing underground nuclear waste repositories"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trachoma is caused by Chlamydia trachomatis and spreads via eye-seeking flies and direct contact; facial cleanliness and hygiene break transmission."
+        },
+        {
+          "id": 7,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What is the primary public health purpose of administering high-dose vitamin A supplements to young children in endemic areas?",
+          "options": {
+            "A": "To treat chronic adult hypertension",
+            "B": "To cure type 1 diabetes mellitus",
+            "C": "To prevent congenital neural tube defects",
+            "D": "To reduce morbidity and mortality from measles and severe infectious illnesses"
+          },
+          "correctAnswer": "D",
+          "explanation": "Vitamin A supplementation strengthens immune function and significantly lowers severe illness and mortality risks in deficient children."
+        },
+        {
+          "id": 8,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which population-level health metric combines years of life lost and years lived with disability into a single index?",
+          "options": {
+            "A": "Disability-Adjusted Life Years (DALYs)",
+            "B": "Infant Mortality Rate",
+            "C": "Crude Death Rate",
+            "D": "Proportional Mortality Ratio"
+          },
+          "correctAnswer": "A",
+          "explanation": "DALYs quantify total disease burden by capturing both premature mortality and non-fatal health losses."
+        },
+        {
+          "id": 9,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which treatment train is essential for a safe municipal drinking water supply?",
+          "options": {
+            "A": "Proper coagulation, rapid sand filtration, and disinfection (chlorination)",
+            "B": "Addition of industrial machine lubricants",
+            "C": "Complete demineralization via reverse osmosis with added carbonation",
+            "D": "Storage in open-air agricultural runoff reservoirs"
+          },
+          "correctAnswer": "A",
+          "explanation": "Standard water treatment plants utilize physical straining, filtration, and chemical disinfection to destroy enteric pathogens."
+        },
+        {
+          "id": 10,
+          "subject": "Community Health",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which immunization strategy provides temporary, pre-formed immunity rather than stimulating the host's own immune response?",
+          "options": {
+            "A": "Toxoid tetanus vaccine",
+            "B": "Administration of pre-formed human immunoglobulin antibodies",
+            "C": "Live-attenuated measles vaccine",
+            "D": "Inactivated polio vaccine"
+          },
+          "correctAnswer": "B",
+          "explanation": "Passive immunization introduces antibodies directly into the recipient, providing immediate but short-lived protection."
+        }
+      ]
+    },
+    {
+      "subject": "General Nursing",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What is the primary purpose of a bed alarm in fall prevention?",
+          "options": {
+            "A": "To measure the patient's weight",
+            "B": "To alert staff when a patient attempts to exit the bed unassisted",
+            "C": "To monitor blood pressure continuously",
+            "D": "To record sleep patterns"
+          },
+          "correctAnswer": "B",
+          "explanation": "A bed alarm alerts staff when a patient at risk of falling attempts to leave the bed without assistance, allowing timely intervention."
+        },
+        {
+          "id": 2,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "The 'Universal Protocol' in surgical settings primarily aims to prevent which type of error?",
+          "options": {
+            "A": "Delayed discharge",
+            "B": "Medication dosing errors",
+            "C": "Post-operative infection",
+            "D": "Wrong-site, wrong-procedure, or wrong-patient surgery"
+          },
+          "correctAnswer": "D",
+          "explanation": "The Universal Protocol, including a pre-procedure verification and a time-out, is designed to prevent wrong-site, wrong-procedure, and wrong-patient surgery."
+        },
+        {
+          "id": 3,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What does the acronym SBAR stand for in clinical communication?",
+          "options": {
+            "A": "Safety, Barriers, Assessment, Response",
+            "B": "Situation, Background, Assessment, Recommendation",
+            "C": "Status, Background, Analysis, Review",
+            "D": "Symptoms, Behavior, Action, Report"
+          },
+          "correctAnswer": "B",
+          "explanation": "SBAR (Situation, Background, Assessment, Recommendation) is a structured communication tool used to convey critical patient information clearly."
+        },
+        {
+          "id": 4,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Restraints in a healthcare setting should be used under which of the following conditions?",
+          "options": {
+            "A": "Only after less restrictive alternatives have failed and with a valid order",
+            "B": "Whenever staffing is limited",
+            "C": "As a first-line intervention for confusion",
+            "D": "Routinely for all elderly patients"
+          },
+          "correctAnswer": "A",
+          "explanation": "Restraints should be a last resort, applied only after less restrictive measures fail, with appropriate orders and regular reassessment."
+        },
+        {
+          "id": 5,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What is the primary goal of a 'time-out' performed immediately before a surgical procedure?",
+          "options": {
+            "A": "To confirm correct patient, procedure, and site with the whole team",
+            "B": "To review billing codes",
+            "C": "To sterilize instruments",
+            "D": "To allow the surgical team a rest break"
+          },
+          "correctAnswer": "A",
+          "explanation": "The pre-procedure time-out is a final verification involving the whole team to confirm the correct patient, procedure, and surgical site."
+        },
+        {
+          "id": 6,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A nursing diagnosis such as 'Risk for Falls related to impaired mobility' is derived during which step of the nursing process?",
+          "options": {
+            "A": "Diagnosis",
+            "B": "Evaluation",
+            "C": "Planning",
+            "D": "Assessment"
+          },
+          "correctAnswer": "A",
+          "explanation": "Formulating nursing diagnoses that identify actual or potential problems occurs during the diagnosis phase of the nursing process."
+        },
+        {
+          "id": 7,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "What is the primary purpose of an expected outcome or goal statement in a nursing care plan?",
+          "options": {
+            "A": "To assign blame for poor outcomes",
+            "B": "To satisfy billing codes only",
+            "C": "To replace the physician's orders",
+            "D": "To provide a measurable standard for evaluating patient progress"
+          },
+          "correctAnswer": "D",
+          "explanation": "Expected outcomes provide specific, measurable criteria against which the patient's progress and the effectiveness of care can be evaluated."
+        },
+        {
+          "id": 8,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "If an error is made in a paper medical record, what is the correct correction method?",
+          "options": {
+            "A": "Use correction fluid to cover the error",
+            "B": "Tear out the page and rewrite it",
+            "C": "Draw a single line through the error, initial, date, and write the correction",
+            "D": "Erase the error completely"
+          },
+          "correctAnswer": "C",
+          "explanation": "Errors should be corrected with a single strike-through, initials, date, and the correct entry, preserving the original for legal accountability."
+        },
+        {
+          "id": 9,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which of the following best describes an 'objective' assessment finding?",
+          "options": {
+            "A": "The patient reports pain as 7 out of 10",
+            "B": "The nurse measures a blood pressure of 150/95 mmHg",
+            "C": "The patient describes feeling anxious",
+            "D": "The patient states 'I feel dizzy'"
+          },
+          "correctAnswer": "B",
+          "explanation": "Objective data are measurable and observable findings, such as a directly measured blood pressure reading, rather than what the patient reports."
+        },
+        {
+          "id": 10,
+          "subject": "General Nursing",
+          "department": "Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "Which statement best reflects the principle of confidentiality in nursing documentation?",
+          "options": {
+            "A": "Confidentiality applies only after discharge",
+            "B": "Patient records may be discussed openly in public areas",
+            "C": "All staff may access any patient's chart at any time",
+            "D": "Access to patient information should be limited to those with a legitimate need to know"
+          },
+          "correctAnswer": "D",
+          "explanation": "Confidentiality requires that patient information be accessed only by those directly involved in care or with a legitimate professional need."
+        }
+      ]
+    },
+    {
+      "subject": "Parasitology",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which drug is commonly used to treat Diphyllobothrium latum infection?",
+          "options": {
+            "A": "Diethylcarbamazine",
+            "B": "Praziquantel",
+            "C": "Metronidazole",
+            "D": "Ivermectin"
+          },
+          "correctAnswer": "B",
+          "explanation": "Praziquantel is an effective treatment for Diphyllobothrium latum and other tapeworm infections."
+        },
+        {
+          "id": 2,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "A 25-year-old male presenting with severe anal pruritus at night undergoes the transparent adhesive tape test, which reveals flattened, asymmetrical eggs containing a coiled embryo. What is this common nematode found worldwide and across African communities?",
+          "options": {
+            "A": "Trichuris trichiura",
+            "B": "Enterobius vermicularis",
+            "C": "Ascaris lumbricoides",
+            "D": "Ancylostoma duodenale"
+          },
+          "correctAnswer": "B",
+          "explanation": "Enterobius vermicularis (pinworm) is a ubiquitous human pinworm diagnosed by applying adhesive tape to the perianal region to capture characteristic asymmetrical eggs deposited at night."
+        },
+        {
+          "id": 3,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which stage of Plasmodium is injected into humans by an infected female Anopheles mosquito?",
+          "options": {
+            "A": "Merozoite",
+            "B": "Sporozoite",
+            "C": "Gametocyte",
+            "D": "Trophozoite"
+          },
+          "correctAnswer": "B",
+          "explanation": "During a blood meal, an infected female Anopheles mosquito injects sporozoites into the human bloodstream. They travel to the liver, where they invade liver cells and develop further."
+        },
+        {
+          "id": 4,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which snail genus serves as the intermediate host for Schistosoma mansoni?",
+          "options": {
+            "A": "Lymnaea snails",
+            "B": "Biomphalaria snails",
+            "C": "Bulinus snails",
+            "D": "Oncomelania snails"
+          },
+          "correctAnswer": "B",
+          "explanation": "Biomphalaria freshwater snails serve as the intermediate host in which Schistosoma mansoni larval stages develop before becoming infective cercariae."
+        },
+        {
+          "id": 5,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which of the following best describes 'swimmer's itch,' a self-limiting dermatitis seen after exposure to contaminated water?",
+          "options": {
+            "A": "An allergic reaction to chlorine in swimming pools",
+            "B": "A hypersensitivity reaction to cercariae of non-human (avian or animal) schistosomes penetrating human skin",
+            "C": "A bacterial skin infection acquired from pool water",
+            "D": "A fungal infection of the skin acquired from lake mud"
+          },
+          "correctAnswer": "B",
+          "explanation": "Swimmer's itch is caused by cercariae of bird or other animal schistosomes that penetrate human skin but cannot complete their life cycle, provoking a self-limiting hypersensitivity dermatitis."
+        },
+        {
+          "id": 6,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which drug is the treatment of choice for Trichomonas vaginalis infection?",
+          "options": {
+            "A": "Fluconazole",
+            "B": "Metronidazole",
+            "C": "Ivermectin",
+            "D": "Azithromycin only"
+          },
+          "correctAnswer": "B",
+          "explanation": "Metronidazole (or tinidazole) is the standard treatment for trichomoniasis in both partners."
+        },
+        {
+          "id": 7,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Balantidium coli infection of the colon can cause a clinical picture resembling which other condition?",
+          "options": {
+            "A": "Typhoid fever",
+            "B": "Amoebic dysentery",
+            "C": "Schistosomiasis",
+            "D": "Malaria"
+          },
+          "correctAnswer": "B",
+          "explanation": "Balantidium coli can invade the colonic mucosa and cause flask-shaped ulcers and dysentery similar in presentation to amoebic dysentery."
+        },
+        {
+          "id": 8,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which serological technique, using fluorescently labelled antibodies, is commonly used to detect antibodies against parasites such as Toxoplasma and Leishmania?",
+          "options": {
+            "A": "Modified acid-fast staining",
+            "B": "Indirect fluorescent antibody (IFA) test",
+            "C": "Adhesive tape test",
+            "D": "Kato-Katz technique"
+          },
+          "correctAnswer": "B",
+          "explanation": "The indirect fluorescent antibody test uses fluorescently labelled secondary antibodies to detect patient antibodies bound to parasite antigen on a slide, aiding serological diagnosis."
+        },
+        {
+          "id": 9,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which domestic animal serves as the definitive host for Echinococcus granulosus, harbouring the adult tapeworm?",
+          "options": {
+            "A": "Pig",
+            "B": "Cat",
+            "C": "Dog",
+            "D": "Cow"
+          },
+          "correctAnswer": "C",
+          "explanation": "Dogs and other canids serve as the definitive host, carrying the small adult tapeworm in their intestines and shedding eggs in their faeces."
+        },
+        {
+          "id": 10,
+          "subject": "Parasitology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which intestinal protozoan parasite is transmitted through fecally contaminated water and causes watery diarrhea, particularly in travelers returning from endemic areas?",
+          "options": {
+            "A": "Cryptosporidium parvum",
+            "B": "Giardia duodenalis",
+            "C": "Cyclospora cayetanensis",
+            "D": "Entamoeba histolytica"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cyclospora cayetanensis is a coccidian protozoan acquired via contaminated water or produce, causing prolonged watery diarrhea and gastrointestinal distress."
+        }
+      ]
+    },
+    {
+      "subject": "Physiology",
+      "questionCount": 10,
+      "questions": [
+        {
+          "id": 1,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has a substantial reduction in arterial oxygen content despite normal alveolar ventilation. Which change could produce this finding?",
+          "options": {
+            "A": "Severe reduction in haemoglobin concentration",
+            "B": "Increased alveolar oxygen partial pressure",
+            "C": "Increased oxygen saturation",
+            "D": "Increased haemoglobin concentration"
+          },
+          "correctAnswer": "A",
+          "explanation": "Reduced haemoglobin concentration lowers arterial oxygen content even when oxygen loading by the lungs is normal."
+        },
+        {
+          "id": 2,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient develops severe metabolic acidosis. Which change would occur as part of the body's immediate respiratory compensation?",
+          "options": {
+            "A": "Reduced carbon dioxide elimination",
+            "B": "Reduced alveolar ventilation",
+            "C": "Increased PaCO₂",
+            "D": "Increased alveolar ventilation"
+          },
+          "correctAnswer": "D",
+          "explanation": "Increased ventilation removes carbon dioxide, reducing hydrogen ion concentration and helping compensate for metabolic acidosis."
+        },
+        {
+          "id": 3,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has a marked increase in plasma osmolarity after inadequate water intake. Which physiological response occurs to help restore osmotic balance?",
+          "options": {
+            "A": "Increased ADH secretion and increased water reabsorption",
+            "B": "Increased urinary water loss",
+            "C": "Suppression of thirst",
+            "D": "Reduced ADH secretion and increased urine volume"
+          },
+          "correctAnswer": "A",
+          "explanation": "Increased plasma osmolarity stimulates ADH secretion and thirst, promoting water conservation and intake."
+        },
+        {
+          "id": 4,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has reduced sympathetic activity during rest. Which cardiovascular effect would be expected compared with a state of increased sympathetic activity?",
+          "options": {
+            "A": "Increased cardiac contractility",
+            "B": "Reduced heart rate and vascular tone",
+            "C": "Increased adrenal catecholamine release",
+            "D": "Increased heart rate and vascular resistance"
+          },
+          "correctAnswer": "B",
+          "explanation": "Reduced sympathetic activity decreases stimulation of the heart and many vascular beds, contributing to lower heart rate and vascular tone."
+        },
+        {
+          "id": 5,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has reduced plasma albumin but normal capillary hydrostatic pressure. Why is peripheral oedema more likely to develop?",
+          "options": {
+            "A": "Increased albumin causes excessive water retention",
+            "B": "Reduced blood volume prevents all filtration",
+            "C": "Reduced plasma oncotic pressure favours filtration",
+            "D": "Increased plasma oncotic pressure prevents reabsorption"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lower plasma albumin reduces the inward osmotic force that normally helps retain fluid within capillaries, favouring net filtration into tissues."
+        },
+        {
+          "id": 6,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has a decrease in renal perfusion but the reduction remains within the kidney's autoregulatory range. What is the primary purpose of renal autoregulation?",
+          "options": {
+            "A": "To maintain relatively stable renal blood flow and GFR",
+            "B": "To increase urine production regardless of blood pressure",
+            "C": "To prevent all changes in renal blood flow",
+            "D": "To completely stop filtration"
+          },
+          "correctAnswer": "A",
+          "explanation": "Renal autoregulation helps maintain relatively stable renal blood flow and GFR despite moderate changes in arterial pressure."
+        },
+        {
+          "id": 7,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has impaired movement of the diaphragm because of respiratory muscle weakness. What immediate effect would this have on ventilation?",
+          "options": {
+            "A": "Reduced tidal volume",
+            "B": "Increased oxygen diffusion capacity",
+            "C": "Increased tidal volume",
+            "D": "Increased alveolar surface area"
+          },
+          "correctAnswer": "A",
+          "explanation": "Reduced diaphragmatic movement decreases the change in thoracic volume during inspiration, reducing tidal volume."
+        },
+        {
+          "id": 8,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient has a significant reduction in circulating blood volume. Which combination of renal and hormonal responses would help conserve fluid?",
+          "options": {
+            "A": "Reduced sympathetic activity and increased natriuresis",
+            "B": "Increased ADH and aldosterone activity",
+            "C": "Reduced ADH and increased sodium excretion",
+            "D": "Increased urine formation and reduced renin"
+          },
+          "correctAnswer": "B",
+          "explanation": "Reduced circulating volume activates mechanisms including ADH release and the renin-angiotensin-aldosterone system, promoting water and sodium conservation."
+        },
+        {
+          "id": 9,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "TWO_HOUR",
+          "question": "A patient develops severe hypocalcaemia. Which physiological effect helps explain the development of muscle spasms and increased neuromuscular excitability?",
+          "options": {
+            "A": "Higher extracellular calcium blocks all action potentials",
+            "B": "Lower extracellular calcium increases membrane excitability",
+            "C": "Hypocalcaemia causes immediate muscle paralysis in all cases",
+            "D": "Lower calcium prevents neurotransmitter release completely"
+          },
+          "correctAnswer": "B",
+          "explanation": "Reduced extracellular calcium lowers the threshold for excitation of nerve and muscle membranes, increasing neuromuscular excitability."
+        },
+        {
+          "id": 10,
+          "subject": "Physiology",
+          "department": "Pre-Clinical",
+          "examMode": "ONE_HOUR",
+          "question": "Which factor is primarily responsible for the movement of water across a selectively permeable cell membrane during osmosis?",
+          "options": {
+            "A": "Difference in platelet count",
+            "B": "Difference in haemoglobin concentration",
+            "C": "Difference in solute concentration",
+            "D": "Difference in body temperature"
+          },
+          "correctAnswer": "C",
+          "explanation": "Water moves across a selectively permeable membrane in response to differences in effective solute concentration."
+        }
+      ]
+    }
+  ]
+}
