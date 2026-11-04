@@ -6,221 +6,260 @@
   <meta name="theme-color" content="#123B5D">
   <title>Community Health Exam</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
   <style>
     * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f6fa;
-      color: #243447;
-    }
-
-    header {
-      background: #123B5D;
-      color: white;
-      padding: 28px 18px;
-      text-align: center;
-    }
-
+    body { margin: 0; font-family: Arial, sans-serif; background: #f2f6fa; color: #243447; }
+    header { background: #123B5D; color: white; padding: 28px 18px; text-align: center; }
     header h1 { margin: 0 0 9px; }
     header p { margin: 0; opacity: .9; }
-
-    main {
-      max-width: 650px;
-      margin: 25px auto;
-      padding: 0 16px;
-    }
-
-    .panel {
-      background: white;
-      padding: 23px;
-      border-radius: 14px;
-      box-shadow: 0 3px 12px #0000000d;
-    }
-
+    main { max-width: 650px; margin: 25px auto; padding: 0 16px; }
+    .panel { background: white; padding: 23px; border-radius: 14px; box-shadow: 0 3px 12px #0000000d; }
     h2 { color: #123B5D; }
-
-    .subjects {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    button {
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      padding: 17px;
-    }
-
-    .subject-button {
-      background: white;
-      color: #123B5D;
-      border: 1px solid #dce5ed;
-      text-align: left;
-      width: 100%;
-    }
-
-    .subject-button:hover {
-      background: #eaf2f8;
-    }
-
-    .subject-button span {
-      float: right;
-      color: #668096;
-      font-weight: normal;
-      font-size: 14px;
-    }
-
-    .primary-button {
-      background: #123B5D;
-      color: white;
-      width: 100%;
-      margin-top: 15px;
-    }
-
-    .secondary-button {
-      background: #e7edf3;
-      color: #123B5D;
-      width: 100%;
-      margin-top: 12px;
-    }
-
-    .hidden { display: none; }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #718096;
-      font-size: 13px;
-    }
+    .subjects { display: grid; gap: 12px; margin-top: 20px; }
+    button { cursor: pointer; font-size: 16px; font-weight: bold; border: none; border-radius: 10px; padding: 15px; }
+    button:disabled { cursor: not-allowed; opacity: .55; }
+    .subject-button { background: white; color: #123B5D; border: 1px solid #dce5ed; text-align: left; width: 100%; }
+    .subject-button:hover { background: #eaf2f8; }
+    .subject-button span { float: right; color: #668096; font-weight: normal; font-size: 14px; }
+    .primary-button { background: #123B5D; color: white; width: 100%; margin-top: 15px; }
+    .secondary-button { background: #e7edf3; color: #123B5D; width: 100%; margin-top: 12px; }
+    .hidden { display: none !important; }
+    .muted { color: #668096; }
+    .progress-track { height: 8px; background: #e7edf3; border-radius: 20px; overflow: hidden; margin: 15px 0 20px; }
+    .progress-fill { height: 100%; width: 0; background: #23845b; transition: width .2s ease; }
+    .option-list { display: grid; gap: 10px; margin-top: 20px; }
+    .option-label { display: flex; gap: 11px; align-items: flex-start; padding: 14px; border: 1px solid #dce5ed; border-radius: 10px; cursor: pointer; line-height: 1.45; }
+    .option-label:has(input:checked) { border-color: #123B5D; background: #eaf2f8; }
+    .option-label input { margin-top: 3px; accent-color: #123B5D; }
+    .quiz-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .quiz-nav button { width: 100%; }
+    .answer-card { padding: 16px; border: 1px solid #dce5ed; border-radius: 10px; margin: 14px 0; }
+    .answer-card.correct { border-left: 5px solid #23845b; }
+    .answer-card.incorrect { border-left: 5px solid #c44747; }
+    .answer-card h3 { margin: 0 0 10px; font-size: 16px; line-height: 1.4; }
+    .answer-card p { line-height: 1.5; margin: 8px 0; }
+    .score { font-size: 26px; font-weight: bold; color: #123B5D; }
+    footer { text-align: center; padding: 25px; color: #718096; font-size: 13px; }
   </style>
 </head>
-
 <body>
-
 <header>
   <h1>Community Health Exam</h1>
   <p>Free Health Science Practice Quizzes</p>
 </header>
-
 <main>
-
   <section id="homeScreen" class="panel">
     <h2>Welcome!</h2>
-
-    <p>
-      Test your knowledge with practice questions
-      across nine health science subjects.
-    </p>
-
+    <p>Test your knowledge with practice questions across nine health science subjects.</p>
     <p>Each subject contains 10 multiple-choice questions.</p>
-
     <h2>Choose a Subject</h2>
-
-    <div id="subjectList" class="subjects"></div>
+    <div id="subjectList" class="subjects"><p class="muted">Loading subjects...</p></div>
   </section>
 
   <section id="subjectScreen" class="panel hidden">
     <h2 id="selectedSubject"></h2>
-
-    <p>
-      This practice quiz contains 10 multiple-choice
-      questions.
-    </p>
-
-    <p>
-      After submitting your answers, you will see
-      your score, correct answers and explanations.
-    </p>
-
-    <button class="primary-button" onclick="startQuiz()">
-      Start Quiz
-    </button>
-
-    <button class="secondary-button" onclick="showHome()">
-      Back to Subjects
-    </button>
+    <p>This practice quiz contains 10 multiple-choice questions.</p>
+    <p>Answer all questions to see your score, correct answers and explanations.</p>
+    <button class="primary-button" onclick="startQuiz()">Start Quiz</button>
+    <button class="secondary-button" onclick="showHome()">Back to Subjects</button>
   </section>
 
   <section id="quizScreen" class="panel hidden">
     <h2 id="quizSubject"></h2>
-    <p>The quiz question bank will be connected in the next stage.</p>
-
-    <button class="secondary-button" onclick="showHome()">
-      Back to Subjects
-    </button>
+    <p id="questionCounter" class="muted"></p>
+    <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+    <h3 id="questionText"></h3>
+    <div id="optionList" class="option-list"></div>
+    <div class="quiz-nav">
+      <button id="previousButton" class="secondary-button" onclick="previousQuestion()">Previous</button>
+      <button id="nextButton" class="primary-button" onclick="nextQuestion()">Next</button>
+    </div>
+    <button id="submitButton" class="primary-button hidden" onclick="submitQuiz()">Submit Answers</button>
+    <button class="secondary-button" onclick="confirmExitQuiz()">Exit Quiz</button>
   </section>
 
+  <section id="resultsScreen" class="panel hidden">
+    <h2>Quiz Results</h2>
+    <p id="resultSubject"></p>
+    <p id="scoreText" class="score"></p>
+    <p id="resultMessage"></p>
+    <h2>Answer Review</h2>
+    <div id="answerReview"></div>
+    <button class="primary-button" onclick="showHome()">Back to Subjects</button>
+    <button class="secondary-button" onclick="retakeQuiz()">Retake This Quiz</button>
+  </section>
 </main>
-
-<footer>
-  Community Health Exam · Practice and improve
-</footer>
+<footer>Community Health Exam · Practice and improve</footer>
 
 <script>
-    const tg = window.Telegram?.WebApp;
+  const tg = window.Telegram?.WebApp;
+  if (tg) { tg.ready(); tg.expand(); }
 
-  if (tg) {
-    tg.ready();
-    tg.expand();
-  }
-  
   const subjects = [
-    "Anatomy",
-    "Physiology",
-    "Pharmacology",
-    "Community Health",
-    "Parasitology",
-    "Medicine",
-    "Paediatrics",
-    "General Nursing",
-    "Nutrition"
+    "Anatomy", "Physiology", "Pharmacology", "Community Health",
+    "Parasitology", "Medicine", "Paediatrics", "General Nursing", "Nutrition"
   ];
 
+  let questionBank = null;
   let currentSubject = "";
+  let currentQuestions = [];
+  let currentQuestionIndex = 0;
+  let selectedAnswers = {};
 
-  const subjectList = document.getElementById("subjectList");
+  const screens = ["homeScreen", "subjectScreen", "quizScreen", "resultsScreen"];
+  function showScreen(screenId) {
+    screens.forEach(id => document.getElementById(id).classList.toggle("hidden", id !== screenId));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
-  subjects.forEach(subject => {
-    const button = document.createElement("button");
+  async function loadQuestionBank() {
+    const subjectList = document.getElementById("subjectList");
+    try {
+      const response = await fetch("questions.json", { cache: "no-store" });
+      if (!response.ok) throw new Error(`Could not load questions.json (${response.status})`);
+      const data = await response.json();
+      if (!data || !Array.isArray(data.subjects)) throw new Error("The question file has an unexpected format.");
+      questionBank = data;
+      renderSubjects();
+    } catch (error) {
+      console.error(error);
+      subjectList.textContent = "Could not load the question bank. Please check that questions.json is in the same GitHub Pages folder as index.html, then refresh.";
+    }
+  }
 
-    button.className = "subject-button";
-    button.innerHTML = `${subject} <span>10 Questions</span>`;
-
-    button.addEventListener("click", () => {
-      selectSubject(subject);
+  function renderSubjects() {
+    const subjectList = document.getElementById("subjectList");
+    subjectList.replaceChildren();
+    subjects.forEach(subject => {
+      const record = questionBank.subjects.find(item => item.subject === subject);
+      const button = document.createElement("button");
+      button.className = "subject-button";
+      button.disabled = !record || !Array.isArray(record.questions) || record.questions.length !== 10;
+      const name = document.createElement("span");
+      name.textContent = button.disabled ? "Unavailable" : `${record.questions.length} Questions`;
+      button.append(document.createTextNode(subject), name);
+      button.addEventListener("click", () => selectSubject(subject));
+      subjectList.appendChild(button);
     });
-
-    subjectList.appendChild(button);
-  });
+  }
 
   function selectSubject(subject) {
+    const record = questionBank?.subjects.find(item => item.subject === subject);
+    if (!record || !Array.isArray(record.questions) || record.questions.length !== 10) {
+      alert("The questions for this subject are not available.");
+      return;
+    }
     currentSubject = subject;
-
+    currentQuestions = record.questions;
     document.getElementById("selectedSubject").textContent = subject;
-    document.getElementById("homeScreen").classList.add("hidden");
-    document.getElementById("subjectScreen").classList.remove("hidden");
+    showScreen("subjectScreen");
   }
 
   function showHome() {
-    document.getElementById("homeScreen").classList.remove("hidden");
-    document.getElementById("subjectScreen").classList.add("hidden");
-    document.getElementById("quizScreen").classList.add("hidden");
+    showScreen("homeScreen");
   }
 
   function startQuiz() {
-    document.getElementById("subjectScreen").classList.add("hidden");
-    document.getElementById("quizScreen").classList.remove("hidden");
-
-    document.getElementById("quizSubject").textContent =
-      currentSubject;
+    currentQuestionIndex = 0;
+    selectedAnswers = {};
+    document.getElementById("quizSubject").textContent = currentSubject;
+    showScreen("quizScreen");
+    renderQuestion();
   }
-</script>
 
+  function renderQuestion() {
+    const question = currentQuestions[currentQuestionIndex];
+    const total = currentQuestions.length;
+    document.getElementById("questionCounter").textContent = `Question ${currentQuestionIndex + 1} of ${total} · ${Object.keys(selectedAnswers).length} answered`;
+    document.getElementById("progressFill").style.width = `${((currentQuestionIndex + 1) / total) * 100}%`;
+    document.getElementById("questionText").textContent = question.question;
+
+    const optionList = document.getElementById("optionList");
+    optionList.replaceChildren();
+    ["A", "B", "C", "D"].forEach(letter => {
+      const label = document.createElement("label");
+      label.className = "option-label";
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = "answer";
+      radio.value = letter;
+      radio.checked = selectedAnswers[question.id] === letter;
+      radio.addEventListener("change", () => {
+        selectedAnswers[question.id] = letter;
+        renderQuestionStatus();
+      });
+      const text = document.createElement("span");
+      text.textContent = `${letter}. ${question.options[letter]}`;
+      label.append(radio, text);
+      optionList.appendChild(label);
+    });
+
+    document.getElementById("previousButton").disabled = currentQuestionIndex === 0;
+    const isLast = currentQuestionIndex === total - 1;
+    document.getElementById("nextButton").classList.toggle("hidden", isLast);
+    document.getElementById("submitButton").classList.toggle("hidden", !isLast);
+    document.getElementById("submitButton").disabled = Object.keys(selectedAnswers).length !== total;
+    renderQuestionStatus();
+  }
+
+  function renderQuestionStatus() {
+    const total = currentQuestions.length;
+    document.getElementById("questionCounter").textContent = `Question ${currentQuestionIndex + 1} of ${total} · ${Object.keys(selectedAnswers).length} answered`;
+    document.getElementById("submitButton").disabled = Object.keys(selectedAnswers).length !== total;
+  }
+
+  function previousQuestion() {
+    if (currentQuestionIndex > 0) { currentQuestionIndex--; renderQuestion(); }
+  }
+
+  function nextQuestion() {
+    if (currentQuestionIndex < currentQuestions.length - 1) { currentQuestionIndex++; renderQuestion(); }
+  }
+
+  function confirmExitQuiz() {
+    if (confirm("Exit this quiz? Your answers in this attempt will be lost.")) showHome();
+  }
+
+  function submitQuiz() {
+    if (Object.keys(selectedAnswers).length !== currentQuestions.length) {
+      alert("Please answer all questions before submitting.");
+      return;
+    }
+    let score = 0;
+    currentQuestions.forEach(question => {
+      if (selectedAnswers[question.id] === question.correctAnswer) score++;
+    });
+    document.getElementById("resultSubject").textContent = currentSubject;
+    document.getElementById("scoreText").textContent = `${score} / ${currentQuestions.length} (${Math.round(score / currentQuestions.length * 100)}%)`;
+    document.getElementById("resultMessage").textContent = score === 10 ? "Excellent work! You got every question correct." : score >= 7 ? "Well done! Review the explanations to strengthen your knowledge." : score >= 5 ? "Good effort. Review the explanations and try again." : "Keep practising. Review each explanation and give it another try.";
+    renderAnswerReview();
+    showScreen("resultsScreen");
+  }
+
+  function renderAnswerReview() {
+    const review = document.getElementById("answerReview");
+    review.replaceChildren();
+    currentQuestions.forEach((question, index) => {
+      const chosen = selectedAnswers[question.id];
+      const isCorrect = chosen === question.correctAnswer;
+      const card = document.createElement("article");
+      card.className = `answer-card ${isCorrect ? "correct" : "incorrect"}`;
+      const heading = document.createElement("h3");
+      heading.textContent = `${index + 1}. ${question.question}`;
+      const yourAnswer = document.createElement("p");
+      yourAnswer.textContent = `Your answer: ${chosen}. ${question.options[chosen]}`;
+      const correctAnswer = document.createElement("p");
+      correctAnswer.textContent = `Correct answer: ${question.correctAnswer}. ${question.options[question.correctAnswer]}`;
+      const explanation = document.createElement("p");
+      explanation.textContent = `Explanation: ${question.explanation}`;
+      card.append(heading, yourAnswer, correctAnswer, explanation);
+      review.appendChild(card);
+    });
+  }
+
+  function retakeQuiz() { startQuiz(); }
+
+  loadQuestionBank();
+</script>
 </body>
 </html>
