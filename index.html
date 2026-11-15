@@ -258,8 +258,10 @@ window.addEventListener("popstate", (event) => {
       radio.value = letter;
       radio.checked = selectedAnswers[question.id] === letter;
       radio.addEventListener("change", () => {
-        selectedAnswers[question.id] = letter;
-        renderQuestionStatus();
+      selectedAnswers[question.id] = letter;
+      saveQuizSession();
+      renderQuestionStatus();
+    });
       });
       const text = document.createElement("span");
       text.textContent = `${letter}. ${question.options[letter]}`;
