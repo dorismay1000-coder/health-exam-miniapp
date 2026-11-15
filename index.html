@@ -170,9 +170,38 @@
     showScreen("subjectScreen");
   }
 
-  function showHome() {
-    showScreen("homeScreen");
+  
+function showScreen(screenId, updateHistory = true) {
+  screens.forEach(id =>
+    document.getElementById(id).classList.toggle("hidden", id !== screenId)
+  );
+
+  if (updateHistory) {
+    window.history.pushState(
+      { screen: screenId },
+      "",
+      window.location.href
+    );
   }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.history.replaceState(
+  { screen: "homeScreen" },
+  "",
+  window.location.href
+);
+
+window.addEventListener("popstate", (event) => {
+  const previousScreen = event.state?.screen;
+
+  if (screens.includes(previousScreen)) {
+    showScreen(previousScreen, false);
+  } else {
+    showScreen("homeScreen", false);
+  }
+});
 
   function startQuiz() {
     currentQuestionIndex = 0;
