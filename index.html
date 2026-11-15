@@ -235,10 +235,11 @@ window.addEventListener("popstate", (event) => {
   function startQuiz() {
     currentQuestionIndex = 0;
     selectedAnswers = {};
+    saveQuizSession();
     document.getElementById("quizSubject").textContent = currentSubject;
     showScreen("quizScreen");
     renderQuestion();
-  }
+}
 
   function renderQuestion() {
     const question = currentQuestions[currentQuestionIndex];
