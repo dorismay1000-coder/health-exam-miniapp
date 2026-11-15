@@ -40,6 +40,23 @@
     .answer-card p { line-height: 1.5; margin: 8px 0; }
     .score { font-size: 26px; font-weight: bold; color: #123B5D; }
     footer { text-align: center; padding: 25px; color: #718096; font-size: 13px; }
+.share-question-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2481cc;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.share-question-button:hover {
+  background-color: #1b6da9;
+}
+
   </style>
 </head>
 <body>
@@ -77,22 +94,6 @@
     <button id="submitButton" class="primary-button hidden" onclick="submitQuiz()">Submit Answers</button>
     <button class="secondary-button" onclick="confirmExitQuiz()">Exit Quiz</button>
   </section>
-.share-question-button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2481cc;
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.share-question-button:hover {
-  background-color: #1b6da9;
-}
   <section id="resultsScreen" class="panel hidden">
     <h2>Quiz Results</h2>
     <p id="resultSubject"></p>
