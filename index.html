@@ -122,11 +122,21 @@
   let selectedAnswers = {};
 
   const screens = ["homeScreen", "subjectScreen", "quizScreen", "resultsScreen"];
-  function showScreen(screenId) {
-    screens.forEach(id => document.getElementById(id).classList.toggle("hidden", id !== screenId));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  function showScreen(screenId, updateHistory = true) {
+  screens.forEach(id =>
+    document.getElementById(id).classList.toggle("hidden", id !== screenId)
+  );
+
+  if (updateHistory) {
+    window.history.pushState(
+      { screen: screenId },
+      "",
+      window.location.href
+    );
   }
 
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
   async function loadQuestionBank() {
     const subjectList = document.getElementById("subjectList");
     try {
