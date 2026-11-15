@@ -236,26 +236,69 @@
     showScreen("resultsScreen");
   }
 
-  function renderAnswerReview() {
-    const review = document.getElementById("answerReview");
-    review.replaceChildren();
-    currentQuestions.forEach((question, index) => {
-      const chosen = selectedAnswers[question.id];
-      const isCorrect = chosen === question.correctAnswer;
-      const card = document.createElement("article");
-      card.className = `answer-card ${isCorrect ? "correct" : "incorrect"}`;
-      const heading = document.createElement("h3");
-      heading.textContent = `${index + 1}. ${question.question}`;
-      const yourAnswer = document.createElement("p");
-      yourAnswer.textContent = `Your answer: ${chosen}. ${question.options[chosen]}`;
-      const correctAnswer = document.createElement("p");
-      correctAnswer.textContent = `Correct answer: ${question.correctAnswer}. ${question.options[question.correctAnswer]}`;
-      const explanation = document.createElement("p");
-      explanation.textContent = `Explanation: ${question.explanation}`;
-      card.append(heading, yourAnswer, correctAnswer, explanation);
-      review.appendChild(card);
+  
+function renderAnswerReview() {
+  const review = document.getElementById("answerReview");
+  review.replaceChildren();
+
+  currentQuestions.forEach((question, index) => {
+    const chosen = selectedAnswers[question.id];
+    const isCorrect = chosen === question.correctAnswer;
+
+    const card = document.createElement("article");
+    card.className = `answer-card ${isCorrect ? "correct" : "incorrect"}`;
+
+    const heading = document.createElement("h3");
+    heading.textContent = `${index + 1}. ${question.question}`;
+
+    const yourAnswer = document.createElement("p");
+    yourAnswer.textContent = `Your answer: ${chosen}. ${question.options[chosen]}`;
+
+    const correctAnswer = document.createElement("p");
+    correctAnswer.textContent = `Correct answer: ${question.correctAnswer}. ${question.options[question.correctAnswer]}`;
+
+    const explanation = document.createElement("p");
+    explanation.textContent = `Explanation: ${question.explanation}`;
+
+    const shareButton = document.createElement("button");
+    shareButton.type = "button";
+    shareButton.className = "share-question-button";
+    shareButton.textContent = "Share this question";
+
+    shareButton.addEventListener("click", () => {
+      const options = Object.entries(question.options)
+        .map(([key, value], optionIndex) => {
+          const label = /^[A-D]$/i.test(key)
+            ? key.toUpperCase()
+            : String.fromCharCode(65 + optionIndex);
+
+          return `${label}. ${value}`;
+        })
+        .join("\n");
+
+      const message =
+        `Can you answer this question?\n\n` +
+        `${question.question}\n\n${options}`;
+
+      const appUrl = `${window.location.origin}${window.location.pathname}`;
+
+      const shareUrl =
+        "https://t.me/share/url?url=" +
+        encodeURIComponent(appUrl) +
+        "&text=" +
+        encodeURIComponent(message);
+
+      if (window.Telegram?.WebApp?.openTelegramLink) {
+        window.Telegram.WebApp.openTelegramLink(shareUrl);
+      } else {
+        window.open(shareUrl, "_blank", "noopener,noreferrer");
+      }
     });
-  }
+
+    card.append(heading, yourAnswer, correctAnswer, explanation, shareButton);
+    review.appendChild(card);
+  });
+}
 
   function retakeQuiz() { startQuiz(); }
 
