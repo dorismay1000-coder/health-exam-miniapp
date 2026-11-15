@@ -122,6 +122,23 @@
   let selectedAnswers = {};
 
   const screens = ["homeScreen", "subjectScreen", "quizScreen", "resultsScreen"];
+
+  function saveQuizSession() {
+  if (!currentSubject || currentQuestions.length === 0) return;
+
+  const session = {
+    subject: currentSubject,
+    questionIndex: currentQuestionIndex,
+    answers: selectedAnswers
+  };
+
+  localStorage.setItem("activeQuizSession", JSON.stringify(session));
+}
+
+function clearQuizSession() {
+  localStorage.removeItem("activeQuizSession");
+}
+
   function showScreen(screenId, updateHistory = true) {
   screens.forEach(id =>
     document.getElementById(id).classList.toggle("hidden", id !== screenId)
