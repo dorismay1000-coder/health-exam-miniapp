@@ -284,12 +284,20 @@ window.addEventListener("popstate", (event) => {
   }
 
   function previousQuestion() {
-    if (currentQuestionIndex > 0) { currentQuestionIndex--; renderQuestion(); }
-  }
+    if (currentQuestionIndex > 0) {
+      currentQuestionIndex--;
+      saveQuizSession();
+      renderQuestion();
+    }
+}
 
   function nextQuestion() {
-    if (currentQuestionIndex < currentQuestions.length - 1) { currentQuestionIndex++; renderQuestion(); }
-  }
+    if (currentQuestionIndex < currentQuestions.length - 1) {
+      currentQuestionIndex++;
+      saveQuizSession();
+      renderQuestion();
+    }
+}
 
   function confirmExitQuiz() {
     if (confirm("Exit this quiz? Your answers in this attempt will be lost.")) showHome();
