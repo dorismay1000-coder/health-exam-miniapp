@@ -236,8 +236,9 @@ if (telegram?.BackButton) {
 }
 
 window.scrollTo({ top: 0, behavior: "smooth" });
-  async function loadQuestionBank() {
-    const subjectList = document.getElementById("subjectList");
+}
+
+async function loadQuestionBank() {    const subjectList = document.getElementById("subjectList");
     try {
       const response = await fetch("questions.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Could not load questions.json (${response.status})`);
