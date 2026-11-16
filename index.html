@@ -115,6 +115,23 @@
     "Parasitology", "Medicine", "Paediatrics", "General Nursing", "Nutrition"
   ];
 
+  
+function saveQuizSession() {
+  const session = {
+    currentSubject,
+    currentQuestions,
+    currentQuestionIndex,
+    selectedAnswers
+  };
+
+  localStorage.setItem("healthExamSession", JSON.stringify(session));
+}
+
+function clearQuizSession() {
+  localStorage.removeItem("healthExamSession");
+}
+
+
   let questionBank = null;
   let currentSubject = "";
   let currentQuestions = [];
@@ -316,9 +333,9 @@ window.addEventListener("popstate", (event) => {
     document.getElementById("resultSubject").textContent = currentSubject;
     document.getElementById("scoreText").textContent = `${score} / ${currentQuestions.length} (${Math.round(score / currentQuestions.length * 100)}%)`;
     document.getElementById("resultMessage").textContent = score === 10 ? "Excellent work! You got every question correct." : score >= 7 ? "Well done! Review the explanations to strengthen your knowledge." : score >= 5 ? "Good effort. Review the explanations and try again." : "Keep practising. Review each explanation and give it another try.";
-    renderAnswerReview();
-    showScreen("resultsScreen");
-  }
+   renderAnswerReview();
+   clearQuizSession();
+   showScreen("resultsScreen");  }
 
   
 function renderAnswerReview() {
