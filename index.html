@@ -447,7 +447,15 @@ window.addEventListener("popstate", (event) => {
       }
     });
   }
-}  function submitQuiz() {
+}  
+  const telegram = window.Telegram?.WebApp;
+
+if (telegram?.BackButton) {
+  telegram.BackButton.onClick(() => {
+    confirmExitQuiz();
+  });
+}
+  function submitQuiz() {
     if (Object.keys(selectedAnswers).length !== currentQuestions.length) {
       alert("Please answer all questions before submitting.");
       return;
