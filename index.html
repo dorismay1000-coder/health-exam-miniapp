@@ -156,6 +156,63 @@ function clearQuizSession() {
   localStorage.removeItem("activeQuizSession");
 }
 
+  
+function restoreQuizSession() {
+  try {
+    const savedSession = localStorage.getItem("healthExamSession");
+
+    if (!savedSession) return false;
+
+    const session = JSON.parse(savedSession);
+
+    const record = questionBank?.subjects.find(
+      item => item.subject === session.currentSubject
+    );
+
+    if (
+      !record ||
+      !Array.isArray(record.questions) ||
+      record.questions.length !== 10 ||
+      !Number.isInteger(session.currentQuestionIndex) ||
+      session.currentQuestionIndex < 0 ||
+      session.currentQuestionIndex >= record.questions.length ||
+      !session.selectedAnswers ||
+      typeof session.selectedAnswers !== "object" ||
+      Array.isArray(session.selectedAnswers)
+    ) {
+      clearQuizSession();
+      return false;
+    }
+
+    const validAnswers = Object.entries(session.selectedAnswers).every(
+      ([questionId, answer]) =>
+        record.questions.some(q => String(q.id) === questionId) &&
+        ["A", "B", "C", "D"].includes(answer)
+    );
+
+    if (!validAnswers) {
+      clearQuizSession();
+      return false;
+    }
+
+    currentSubject = session.currentSubject;
+    currentQuestions = record.questions;
+    currentQuestionIndex = session.currentQuestionIndex;
+    selectedAnswers = session.selectedAnswers;
+
+    document.getElementById("quizSubject").textContent = currentSubject;
+    showScreen("quizScreen");
+    renderQuestion();
+
+    return true;
+
+  } catch (error) {
+    console.error("Could not restore quiz session:", error);
+    clearQuizSession();
+    return false;
+  }
+}
+
   function showScreen(screenId, updateHistory = true) {
   screens.forEach(id =>
     document.getElementById(id).classList.toggle("hidden", id !== screenId)
@@ -179,7 +236,10 @@ function clearQuizSession() {
       const data = await response.json();
       if (!data || !Array.isArray(data.subjects)) throw new Error("The question file has an unexpected format.");
       questionBank = data;
-      renderSubjects();
+
+    if (!restoreQuizSession()) {
+    renderSubjects();
+    }
     } catch (error) {
       console.error(error);
       subjectList.textContent = "Could not load the question bank. Please check that questions.json is in the same GitHub Pages folder as index.html, then refresh.";
