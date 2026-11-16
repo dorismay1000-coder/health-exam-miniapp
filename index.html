@@ -216,6 +216,7 @@ function restoreQuizSession() {
   screens.forEach(id =>
     document.getElementById(id).classList.toggle("hidden", id !== screenId)
   );
+    alert("showScreen called: " + screenId);
 
   if (updateHistory) {
     window.history.pushState(
