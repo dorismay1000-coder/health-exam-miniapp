@@ -155,8 +155,7 @@ function clearQuizSession() {
 function clearQuizSession() {
   localStorage.removeItem("activeQuizSession");
 }
-
-  
+ 
 function restoreQuizSession() {
   try {
     const savedSession = localStorage.getItem("healthExamSession");
@@ -352,16 +351,7 @@ window.addEventListener("popstate", (event) => {
     showScreen("homeScreen", false);
   }
 });
-
-  const previousScreen = event.state?.screen;
-
-  if (screens.includes(previousScreen)) {
-    showScreen(previousScreen, false);
-  } else {
-    showScreen("homeScreen", false);
-  }
-});
-
+ 
   function startQuiz() {
     currentQuestionIndex = 0;
     selectedAnswers = {};
