@@ -225,7 +225,15 @@ function restoreQuizSession() {
       window.location.href
     );
   }
+const telegram = window.Telegram?.WebApp;
 
+if (telegram?.BackButton) {
+  if (screenId === "quizScreen") {
+    telegram.BackButton.show();
+  } else {
+    telegram.BackButton.hide();
+  }
+}
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
   async function loadQuestionBank() {
@@ -301,7 +309,6 @@ window.history.replaceState(
 
 
 window.addEventListener("popstate", (event) => {
-  alert("Back button event detected");
   const quizScreen = document.getElementById("quizScreen");
   const quizIsActive = !quizScreen.classList.contains("hidden");
 
