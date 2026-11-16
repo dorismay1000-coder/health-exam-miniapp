@@ -441,12 +441,13 @@ window.addEventListener("popstate", (event) => {
   }
 }  
 
-if (telegram?.BackButton) {
-  telegram.BackButton.onClick(() => {
+const telegramBackButton = window.Telegram?.WebApp;
+
+if (telegramBackButton?.BackButton) {
+  telegramBackButton.BackButton.onClick(() => {
     confirmExitQuiz();
   });
-}
-  function submitQuiz() {
+}  function submitQuiz() {
     if (Object.keys(selectedAnswers).length !== currentQuestions.length) {
       alert("Please answer all questions before submitting.");
       return;
