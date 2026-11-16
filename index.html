@@ -300,6 +300,32 @@ window.history.replaceState(
 );
 
 window.addEventListener("popstate", (event) => {
+  const quizScreen = document.getElementById("quizScreen");
+  const quizIsActive = !quizScreen.classList.contains("hidden");
+
+  if (quizIsActive) {
+    const leaveQuiz = window.confirm(
+      "Are you sure you want to leave this examination? Your progress has been saved."
+    );
+
+    if (leaveQuiz) {
+      window.history.replaceState(
+        { screen: "homeScreen" },
+        "",
+        window.location.href
+      );
+      showScreen("homeScreen", false);
+    } else {
+      window.history.pushState(
+        { screen: "quizScreen" },
+        "",
+        window.location.href
+      );
+    }
+
+    return;
+  }
+
   const previousScreen = event.state?.screen;
 
   if (screens.includes(previousScreen)) {
