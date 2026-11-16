@@ -109,7 +109,8 @@
 <script>
   const tg = window.Telegram?.WebApp;
   if (tg) { tg.ready(); tg.expand(); }
-
+alert("Telegram version: " + (tg?.version || "Not detected") +
+      "\nBackButton: " + (tg?.BackButton ? "Available" : "Unavailable"));
   const subjects = [
     "Anatomy", "Physiology", "Pharmacology", "Community Health",
     "Parasitology", "Medicine", "Paediatrics", "General Nursing", "Nutrition"
