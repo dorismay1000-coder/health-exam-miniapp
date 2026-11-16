@@ -224,18 +224,22 @@ function restoreQuizSession() {
       window.location.href
     );
   }
+
 const telegram = window.Telegram?.WebApp;
+
+alert(
+  "Telegram: " + (telegram ? "Detected" : "Not detected") +
+  "\nBackButton: " + (telegram?.BackButton ? "Available" : "Unavailable") +
+  "\nScreen: " + screenId
+);
 
 if (telegram?.BackButton) {
   if (screenId === "quizScreen") {
-    alert("Quiz screen detected. Showing Telegram BackButton.");
     telegram.BackButton.show();
   } else {
     telegram.BackButton.hide();
   }
-}
-
-window.scrollTo({ top: 0, behavior: "smooth" });
+}window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 async function loadQuestionBank() {    const subjectList = document.getElementById("subjectList");
