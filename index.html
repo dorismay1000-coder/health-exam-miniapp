@@ -287,23 +287,7 @@ async function loadQuestionBank() {    const subjectList = document.getElementBy
     document.getElementById("selectedSubject").textContent = subject;
     showScreen("subjectScreen");
   }
-
   
-function showScreen(screenId, updateHistory = true) {
-  screens.forEach(id =>
-    document.getElementById(id).classList.toggle("hidden", id !== screenId)
-  );
-
-  if (updateHistory) {
-    window.history.pushState(
-      { screen: screenId },
-      "",
-      window.location.href
-    );
-  }
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
 function showHome() {
   showScreen("homeScreen");
 }
