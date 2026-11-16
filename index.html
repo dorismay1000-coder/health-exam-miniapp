@@ -301,7 +301,7 @@ window.history.replaceState(
 
 
 window.addEventListener("popstate", (event) => {
-  console.log("ANDROID BACK: popstate event fired");
+  alert("Back button event detected");
   const quizScreen = document.getElementById("quizScreen");
   const quizIsActive = !quizScreen.classList.contains("hidden");
 
