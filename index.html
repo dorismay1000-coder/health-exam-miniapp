@@ -228,13 +228,14 @@ const telegram = window.Telegram?.WebApp;
 
 if (telegram?.BackButton) {
   if (screenId === "quizScreen") {
+    alert("Quiz screen detected. Showing Telegram BackButton.");
     telegram.BackButton.show();
   } else {
     telegram.BackButton.hide();
   }
 }
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+
+window.scrollTo({ top: 0, behavior: "smooth" });
   async function loadQuestionBank() {
     const subjectList = document.getElementById("subjectList");
     try {
