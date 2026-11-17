@@ -216,8 +216,7 @@ function restoreQuizSession() {
   screens.forEach(id =>
     document.getElementById(id).classList.toggle("hidden", id !== screenId)
   );
-    alert("showScreen called: " + screenId);
-
+    
   if (updateHistory) {
     window.history.pushState(
       { screen: screenId },
@@ -228,22 +227,19 @@ function restoreQuizSession() {
 
 const telegram = window.Telegram?.WebApp;
 
-alert(
-  "Telegram: " + (telegram ? "Detected" : "Not detected") +
-  "\nBackButton: " + (telegram?.BackButton ? "Available" : "Unavailable") +
-  "\nScreen: " + screenId
-);
-
 if (telegram?.BackButton) {
   if (screenId === "quizScreen") {
     telegram.BackButton.show();
   } else {
     telegram.BackButton.hide();
   }
-}window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-async function loadQuestionBank() {    const subjectList = document.getElementById("subjectList");
+window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+async function loadQuestionBank() {    
+    const subjectList = document.getElementById("subjectList");
     try {
       const response = await fetch("questions.json", { cache: "no-store" });
       if (!response.ok) throw new Error(`Could not load questions.json (${response.status})`);
