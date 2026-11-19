@@ -73,6 +73,33 @@
   <p>Each subject contains 10 multiple-choice questions. Complete a quiz and review your answers to strengthen your knowledge.</p>
   <h2>Choose a Subject</h2>
   <div id="subjectList" class="subjects"><p class="muted">Loading subjects...</p></div>
+
+  <h2>Share Your Feedback</h2>
+<p>Help us improve Community Health Exam by sharing your experience.</p>
+
+<form id="feedbackForm">
+  <label for="feedbackRating">How would you rate your experience?</label>
+  <select id="feedbackRating" required>
+    <option value="">Select a rating</option>
+    <option value="5">5 - Excellent</option>
+    <option value="4">4 - Very good</option>
+    <option value="3">3 - Good</option>
+    <option value="2">2 - Fair</option>
+    <option value="1">1 - Poor</option>
+  </select>
+
+  <label for="feedbackExperience">What did you like about the app?</label>
+  <textarea id="feedbackExperience" rows="3" maxlength="2000"></textarea>
+
+  <label for="feedbackDifficulties">Did you experience any difficulties?</label>
+  <textarea id="feedbackDifficulties" rows="3" maxlength="2000"></textarea>
+
+  <label for="feedbackSuggestions">What would you like us to improve?</label>
+  <textarea id="feedbackSuggestions" rows="3" maxlength="2000"></textarea>
+
+  <button type="submit" class="primary-button">Submit Feedback</button>
+  <p id="feedbackStatus" role="status"></p>
+</form>
 </section>
 
   <section id="subjectScreen" class="panel hidden">
@@ -515,7 +542,54 @@ function renderAnswerReview() {
 }
 
   function retakeQuiz() { startQuiz(); }
+  const feedbackForm = document.getElementById("feedbackForm");
 
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const submitButton = feedbackForm.querySelector(
+        'button[type="submit"]'
+      );
+      const feedbackStatus = document.getElementById("feedbackStatus");
+
+      const feedbackData = {
+        rating: document.getElementById("feedbackRating").value,
+        experience: document.getElementById("feedbackExperience").value,
+        difficulties: document.getElementById("feedbackDifficulties").value,
+        suggestions: document.getElementById("feedbackSuggestions").value
+      };
+
+      submitButton.disabled = true;
+      feedbackStatus.textContent = "Sending your feedback...";
+
+      try {
+        await fetch(
+          "https://script.google.com/macros/s/AKfycbw3XBbQBhhX4YyaVNztd6RJ9UIykLs0mvkSTeAOsbQUAQmBEV-6eQ1Uts4ctPNBG2g/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(feedbackData)
+          }
+        );
+
+        feedbackStatus.textContent =
+          "Thank you! Your feedback has been sent.";
+
+        feedbackForm.reset();
+
+      } catch (error) {
+        feedbackStatus.textContent =
+          "Unable to send feedback. Please try again.";
+
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  }
   loadQuestionBank();
 </script>
 </body>
