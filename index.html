@@ -153,9 +153,14 @@
   <h2>Share Your Feedback</h2>
 <p>Help us improve Community Health Exam by sharing your experience.</p>
 
-<form id="feedbackForm">
+
+<form id="feedbackForm"
+      action="https://script.google.com/macros/s/AKfycbw3XBbQBhhX4YyaVNztd6RJ9UIykLs0mvkSTeAOsbQUAQmBEV-6eQ1Uts4ctPNBG2g/exec"
+      method="POST"
+      target="feedbackFrame">
+
   <label for="feedbackRating">How would you rate your experience?</label>
-  <select id="feedbackRating" required>
+  <select id="feedbackRating" name="rating" required>
     <option value="">Select a rating</option>
     <option value="5">5 - Excellent</option>
     <option value="4">4 - Very good</option>
@@ -165,17 +170,20 @@
   </select>
 
   <label for="feedbackExperience">What did you like about the app?</label>
-  <textarea id="feedbackExperience" rows="3" maxlength="2000"></textarea>
+  <textarea id="feedbackExperience" name="experience" rows="3" maxlength="2000"></textarea>
 
   <label for="feedbackDifficulties">Did you experience any difficulties?</label>
-  <textarea id="feedbackDifficulties" rows="3" maxlength="2000"></textarea>
+  <textarea id="feedbackDifficulties" name="difficulties" rows="3" maxlength="2000"></textarea>
 
   <label for="feedbackSuggestions">What would you like us to improve?</label>
-  <textarea id="feedbackSuggestions" rows="3" maxlength="2000"></textarea>
+  <textarea id="feedbackSuggestions" name="suggestions" rows="3" maxlength="2000"></textarea>
 
   <button type="submit" class="primary-button">Submit Feedback</button>
   <p id="feedbackStatus" role="status"></p>
 </form>
+
+<iframe name="feedbackFrame" id="feedbackFrame" hidden></iframe>
+
 </section>
 
   <section id="subjectScreen" class="panel hidden">
