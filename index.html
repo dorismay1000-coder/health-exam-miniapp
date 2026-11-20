@@ -58,6 +58,82 @@
 .share-question-button:hover {
   background-color: #1b6da9;
 }
+    
+/* Feedback form styling */
+#feedbackForm {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f7f9fc;
+  border: 1px solid #e1e9f0;
+  border-radius: 14px;
+}
+
+#feedbackForm label {
+  display: block;
+  margin: 18px 0 8px;
+  color: #29465f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#feedbackForm label:first-child {
+  margin-top: 0;
+}
+
+#feedbackForm select,
+#feedbackForm textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d4e0e9;
+  border-radius: 9px;
+  background: white;
+  color: #243447;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#feedbackForm textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+#feedbackForm select:focus,
+#feedbackForm textarea:focus {
+  border-color: #123B5D;
+  box-shadow: 0 0 0 3px #123b5d18;
+}
+
+#feedbackForm select {
+  cursor: pointer;
+}
+
+#feedbackForm .primary-button {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 9px;
+  transition: background .2s, transform .2s;
+}
+
+#feedbackForm .primary-button:hover {
+  background: #194f75;
+}
+
+#feedbackForm .primary-button:active {
+  transform: scale(.99);
+}
+
+#feedbackStatus {
+  margin: 14px 0 0;
+  color: #23845b;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+
   </style>
 </head>
 <body>
