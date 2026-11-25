@@ -416,7 +416,7 @@ window.addEventListener("popstate", (event) => {
   if (quizIsActive) {
     const telegram = window.Telegram?.WebApp;
 
-    if (telegram?.showPopup) {
+    if (telegram?.showPopup && telegram.isVersionAtLeast("6.2")) {
       telegram.showPopup({
         title: "Leave examination?",
         message: "Your progress has been saved. You can continue this examination later.",
