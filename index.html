@@ -561,7 +561,7 @@ window.addEventListener("popstate", (event) => {
   
 function confirmExitQuiz() {
   const telegram = window.Telegram?.WebApp;
-
+  alert("Exit function reached");
   if (telegram?.showPopup) {
     telegram.showPopup({
       title: "Exit examination?",
