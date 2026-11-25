@@ -558,7 +558,8 @@ window.addEventListener("popstate", (event) => {
     }
 }
 
-  function confirmExitQuiz() {
+  
+function confirmExitQuiz() {
   const telegram = window.Telegram?.WebApp;
 
   if (telegram?.showPopup) {
@@ -574,8 +575,17 @@ window.addEventListener("popstate", (event) => {
         showHome();
       }
     });
+  } else {
+    const confirmed = window.confirm(
+      "Exit examination?\n\nYour progress has been saved. You can continue this examination later."
+    );
+
+    if (confirmed) {
+      showHome();
+    }
   }
-}  
+}
+
 
 const telegramBackButton = window.Telegram?.WebApp;
 
