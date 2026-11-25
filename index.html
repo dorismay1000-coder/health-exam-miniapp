@@ -561,30 +561,35 @@ window.addEventListener("popstate", (event) => {
   
 function confirmExitQuiz() {
   const telegram = window.Telegram?.WebApp;
-  alert("Exit function reached");
-if (telegram?.showPopup && telegram.isVersionAtLeast("6.2")) {    telegram.showPopup({
-      title: "Exit examination?",
-      message: "Your progress has been saved. You can continue this examination later.",
-      buttons: [
-        { id: "stay", type: "cancel", text: "Stay" },
-        { id: "exit", type: "destructive", text: "Exit" }
-      ]
-    }, (buttonId) => {
-      if (buttonId === "exit") {
-        showHome();
-      }
-    });
-  } else {
-    const confirmed = window.confirm(
-      "Exit examination?\n\nYour progress has been saved. You can continue this examination later."
-    );
 
-    if (confirmed) {
-      showHome();
+  if (telegram?.showPopup && telegram.isVersionAtLeast("6.2")) {
+    try {
+      telegram.showPopup({
+        title: "Exit examination?",
+        message: "Your progress has been saved. You can continue this examination later.",
+        buttons: [
+          { id: "stay", type: "cancel", text: "Stay" },
+          { id: "exit", type: "destructive", text: "Exit" }
+        ]
+      }, (buttonId) => {
+        if (buttonId === "exit") {
+          showHome();
+        }
+      });
+      return;
+    } catch (error) {
+      console.warn("Telegram popup unavailable:", error);
     }
   }
-}
 
+  const confirmed = window.confirm(
+    "Exit examination?\n\nYour progress has been saved. You can continue this examination later."
+  );
+
+  if (confirmed) {
+    showHome();
+  }
+}
 
 const telegramBackButton = window.Telegram?.WebApp;
 
