@@ -192,7 +192,7 @@
     <h2 id="selectedSubject"></h2>
     <p>This practice quiz contains 10 multiple-choice questions.</p>
     <p>After completing the quiz, you can review your score, correct answers and explanations.</p>
-    <button class="primary-button" onclick="startQuiz()">Start Quiz</button>
+    <button class="primary-button" onclick="startQuizWithMonetag()">Start Quiz</button>
     <button class="secondary-button" onclick="showHome()">Back to Subjects</button>
   </section>
 
@@ -463,6 +463,42 @@ window.addEventListener("popstate", (event) => {
     renderQuestion();
 }
 
+  async function startQuizWithMonetag() {
+    const showAd = window.show_12331657;
+
+    // If Monetag is unavailable, start the quiz normally.
+    if (typeof showAd !== "function") {
+        startQuiz();
+        return;
+    }
+
+    const ymid = `quiz-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+    try {
+        // Preload the advert, with a maximum wait of 5 seconds.
+        await showAd({
+            type: "preload",
+            timeout: 5,
+            ymid: ymid,
+            requestVar: "start_quiz"
+        });
+
+        // Display the advert.
+        await showAd({
+            type: "end",
+            ymid: ymid,
+            requestVar: "start_quiz"
+        });
+
+    } catch (error) {
+        console.warn("Monetag advert unavailable:", error);
+
+    } finally {
+        // Always allow the student to begin the quiz.
+        startQuiz();
+    }
+}
+ 
   function renderQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     const total = currentQuestions.length;
