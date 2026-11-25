@@ -562,8 +562,7 @@ window.addEventListener("popstate", (event) => {
 function confirmExitQuiz() {
   const telegram = window.Telegram?.WebApp;
   alert("Exit function reached");
-  if (telegram?.showPopup) {
-    telegram.showPopup({
+if (telegram?.showPopup && telegram.isVersionAtLeast("6.2")) {    telegram.showPopup({
       title: "Exit examination?",
       message: "Your progress has been saved. You can continue this examination later.",
       buttons: [
