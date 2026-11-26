@@ -465,6 +465,7 @@ window.addEventListener("popstate", (event) => {
 
   async function startQuizWithMonetag() {
     const showAd = window.show_12331657;
+    console.log("Monetag function called:", typeof showAd);
 
     // If Monetag is unavailable, start the quiz normally.
     if (typeof showAd !== "function") {
