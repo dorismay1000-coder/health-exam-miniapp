@@ -463,11 +463,11 @@ window.addEventListener("popstate", (event) => {
     renderQuestion();
 }
 
-  async function startQuizWithMonetag() {
+  
+async function startQuizWithMonetag() {
     const showAd = window.show_12331657;
-    console.log("Monetag function called:", typeof showAd);
 
-    // If Monetag is unavailable, start the quiz normally.
+    // Start the quiz even if Monetag is unavailable.
     if (typeof showAd !== "function") {
         startQuiz();
         return;
@@ -475,8 +475,19 @@ window.addEventListener("popstate", (event) => {
 
     const ymid = `quiz-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
 
+    // Safety timeout: never hold up the examination.
+    let quizStarted = false;
+
+    const startQuizOnce = () => {
+        if (!quizStarted) {
+            quizStarted = true;
+            startQuiz();
+        }
+    };
+
+    const safetyTimer = setTimeout(startQuizOnce, 6000);
+
     try {
-        // Preload the advert, with a maximum wait of 5 seconds.
         await showAd({
             type: "preload",
             timeout: 5,
@@ -484,7 +495,8 @@ window.addEventListener("popstate", (event) => {
             requestVar: "start_quiz"
         });
 
-        // Display the advert.
+        if (quizStarted) return;
+
         await showAd({
             type: "end",
             ymid: ymid,
@@ -493,12 +505,12 @@ window.addEventListener("popstate", (event) => {
 
     } catch (error) {
         console.warn("Monetag advert unavailable:", error);
-
     } finally {
-        // Always allow the student to begin the quiz.
-        startQuiz();
+        clearTimeout(safetyTimer);
+        startQuizOnce();
     }
 }
+
  
   function renderQuestion() {
     const question = currentQuestions[currentQuestionIndex];
